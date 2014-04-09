@@ -23,6 +23,7 @@ develop-eggs
 lib
 lib64
 config.codekit
+*.DS_Store
 __pycache__
 
 # Installer logs
@@ -40,4 +41,3 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
->>>>>>> 838f0ee8e9bbb1cdbe7fd6f6d3406239413ce84e
