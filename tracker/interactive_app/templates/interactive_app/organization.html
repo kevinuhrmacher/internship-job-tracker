@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<<<<<<< HEAD
 <div id="city">
 	<div class="container">
 	<h2>{{ organization.name }}</h2>
@@ -15,3 +16,11 @@
 </div>
 
 {% endblock %}
+=======
+
+    {% for person in current_people %}
+    <h3>{{person.name}}</h3>
+    {% endfor %}
+    
+{% endblock %}
+>>>>>>> 81db3b8ed454498c4d9550c213468da5b3f21d22
