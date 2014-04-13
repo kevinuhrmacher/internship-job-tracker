@@ -27,19 +27,37 @@ p {
 }
 
 .list-box {
-    background-color: @light-gray;
-    text-align: center;
-    padding: 0px;
-    border: 10px solid white;
-    display: table-cell;
-    vertical-align: middle;
-    width: inherit;
+    float:left;
     h3 {
-        color: @dark-blue;
+        color: @light-blue;
         font-weight: bold;
-        margin-top: 7px;
+        margin: 6px 0px -8px 0px;
+        }
+    h5 {
+        color: white;
     }
+    margin-top:30px;
+}
 
+.opacity {
+    opacity:0.7;
+}
+
+
+img:hover {
+    opacity:1.0;
+}
+
+.list-box .text{
+    position:absolute;
+    top:110px;
+    left:15px;
+    width:220px;
+    height:inherit;
+    background-opacity:0.5;
+    background-color: rgba(36, 39, 38, 0.8);
+    opacity: none;
+    padding-left:20px;
 }
 
 
