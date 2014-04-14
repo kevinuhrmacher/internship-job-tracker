@@ -5787,6 +5787,9 @@ button.close {
 #city h4 {
   font-weight: bold;
 }
+#city h5 {
+  font-size: 18px;
+}
 #city p {
   font-family: 'Source Sans Pro';
   color: #242726;
@@ -5819,4 +5822,58 @@ button.close {
   background-color: rgba(36, 39, 38, 0.8);
   opacity: none;
   padding-left: 20px;
+}
+#city .organization-map {
+  width: 250px;
+  height: 50px;
+}
+#city .organization-map h6 {
+  margin-top: 0px;
+  color: #f8f3e8;
+  background-color: #242726;
+  height: 50px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 250px;
+}
+#city .organization-contact {
+  background-color: #4e4947;
+  border-left: 3px solid #242726;
+  padding: 5px 20px;
+}
+#city .organization-contact td,
+#city .organization-contact th {
+  display: table-cell;
+}
+#city .organization-contact h4 {
+  text-align: center;
+  color: #e8eef0;
+}
+#city .organization-contact p {
+  color: #e8eef0;
+}
+#city .featured {
+  background-color: #e8eef0;
+  text-align: center;
+  line-height: 1.5px;
+  margin-top: 20px;
+}
+#city .featured .btn {
+  background-color: #9fc5ff;
+  border: none;
+  color: #e8eef0;
+  text-decoration: none;
+}
+#city .featured .img-circle {
+  width: 140px;
+  height: 140px;
+}
+#city .working-here .img-thumbnail {
+  width: 90px;
+  height: 90px;
+}
+#city .working-here .tab-content {
+  margin: 20px 0px;
+  line-height: 10px;
 }
