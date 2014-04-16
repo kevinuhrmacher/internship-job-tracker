@@ -5832,3 +5832,25 @@ button.close {
   margin: 0 5px 0 0;
   opacity: .5;
 }
+#base .footer {
+  background-color: #242726;
+  margin: 0 0 0 0;
+  padding: 20px 10px 10px 10px;
+}
+#base p {
+  color: #e8eef0;
+  font-weight: 100;
+}
+#base .footerlogo {
+  height: 50px;
+}
+#base .firstcharacter {
+  float: left;
+  color: #e8eef0;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 40px;
+  margin: 3px 0 0 0;
+  padding: 4px 8px 0 3px;
+  font-family: 'Source Sans Pro';
+}
