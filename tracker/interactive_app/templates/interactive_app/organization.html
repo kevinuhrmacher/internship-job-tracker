@@ -32,12 +32,6 @@
                                 <p>JOB OPENINGS:</p>   
                             </td>
                             <td><p><a href="{{ organization.opening }}" target="_blank">{{ organization.opening }}</a></p></td>
-                        </tr>
-                            <td>
-                                <p>TWITTER:</p>   
-                            </td>
-                            <td><p><a href="{{ organization.twitter }}" target="_blank">{{ organization.twitter }}</a></p></td>
-                        </tr>
                     </tbody>
                     </table>
                 </div>
@@ -47,6 +41,10 @@
                 <img src="http://api.tiles.mapbox.com/v3/afortune906.hnidfk42/{{ organization.longitude }},{{ organization.lat }},11/250x250.jpg"/>
                 <h6><span class="glyphicon glyphicon-map-marker"></span>{{ organization.address }}</h6>
                 <a href="{% url 'interactive_app_organization_list' %}">View all organizations</a>
+                <a class="twitter-timeline" href="{{ organization.twitter }}" data-widget-id="456475469009793024">Tweets by {{ organization.name }}</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
             </div>
         </div>
         
@@ -103,9 +101,9 @@
                     
                 </div>
             </div>
-        </div>
- 
+        </div> 
     </div>
+    
 
 
 </div>
