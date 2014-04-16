@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div id="user">
+	<h2>Profiles</h2>
+	<hr />
+	{% for user in users %}
+	<a href="{{ user.pk }}">
+	<div class="row">
+		<div class="col-md-2 col-sm-2">
+			<img src="{% static 'img/' %}{{ user.img_url }}"/>
+		</div>
+		<div class="col-md-10 col-sm-10">
+			<h4>{{ user.name }}</h4>
+			<p><strong>CURRENT LOCATION:</strong> {{ user.current_city }}</p>
+			<p><strong>CURRENT POSITION:</strong> {{ user.current_position }}</p>
+		</div>
+	</div>
+	</a>
+	<hr />
+	{%endfor%}
+</div>
+{% endblock %}
