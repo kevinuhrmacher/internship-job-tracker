@@ -20,8 +20,10 @@
                     </thead>
                     <tbody>
                         {% for person in current_people %}
-                            <tr><td><p><a href="{% url 'interactive_app_user' person.id%}">{{ person.name }}</a></p></td>
+                            <tr><td><p><a href="{% url 'interactive_app_user' person.id %}">{{ person.name }}</a></p></td>
+                            
                             <td><p>{{ person.current_company }}</p></td>
+                            
                             <td><p>{{ person.current_position }}</p></td></tr>
                         {% endfor %}
                         
@@ -32,7 +34,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             {% for org in local_orgs %}
-                            <p><a href="#">{{ org.name }}</a></p>
+                            <p><a href="{% url 'interactive_app_organization' org.id %}">{{ org.name }}</a></p>
                             {% endfor %}
                         </div>
                         

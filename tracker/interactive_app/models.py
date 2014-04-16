@@ -42,38 +42,27 @@ class UserProfile(models.Model):
 
 User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
 
-class User(models.Model):
+class City(models.Model):
     name = models.TextField(null=True)
-    skillset = models.TextField(null=True)
-    email = models.TextField(null=True)
-    graduation_year = models.TextField(null=True)
-    bio = models.TextField(null=True)
-    major = models.TextField(null=True)
-    img_url = models.TextField(null=True)
-    portfolio = models.TextField(null=True)
-    twitter = models.TextField(null=True)
-    current_position = models.TextField(null=True)
-    current_city = models.TextField(null=True)
-    current_company = models.TextField(null=True)
+    state = models.TextField(null=True)
+    lat = models.TextField(null=True)
+    longitude = models.TextField(null=True)
+    img_url = models.TextField(null = True)
     class Meta(object):
-        verbose_name_plural = "Users"
+        verbose_name_plural = "cities"
         ordering = ('name',)
     def __unicode__(self):
         return self.name
     def save(self, *args, **kwargs):
         self.name=self.name.upper()
-        super(User, self).save(*args, **kwargs)
-
-class Position(models.Model):
-    department = models.TextField(null=True)
-    skillset = models.TextField(null=True)
-
+        super(City, self).save(*args, **kwargs)
+        
 class Organization(models.Model):
     name = models.TextField(null=True)
     url = models.TextField(null=True)
     bio = models.TextField(null=True)
     contact = models.TextField(null=True)
-    city = models.TextField(null=True)
+    city = models.ForeignKey(City)
     opening = models.TextField(null=True)
     twitter = models.TextField(null=True)
     img_url = models.TextField(null=True)
@@ -89,18 +78,33 @@ class Organization(models.Model):
         self.name=self.name.upper()
         super(Organization, self).save(*args, **kwargs)
 
-class City(models.Model):
+class User(models.Model):
     name = models.TextField(null=True)
-    state = models.TextField(null=True)
-    lat = models.TextField(null=True)
-    longitude = models.TextField(null=True)
-    img_url = models.TextField(null = True)
+    skillset = models.TextField(null=True)
+    email = models.TextField(null=True)
+    graduation_year = models.TextField(null=True)
+    bio = models.TextField(null=True)
+    major = models.TextField(null=True)
+    img_url = models.TextField(null=True)
+    portfolio = models.TextField(null=True)
+    twitter = models.TextField(null=True)
+    current_position = models.TextField(null=True)
+    current_city = models.ForeignKey(City)
+    current_company = models.ForeignKey(Organization)
     class Meta(object):
-        verbose_name_plural = "cities"
+        verbose_name_plural = "Users"
         ordering = ('name',)
     def __unicode__(self):
         return self.name
     def save(self, *args, **kwargs):
         self.name=self.name.upper()
-        super(City, self).save(*args, **kwargs)
+        super(User, self).save(*args, **kwargs)
+
+class Position(models.Model):
+    department = models.TextField(null=True)
+    skillset = models.TextField(null=True)
+
+
+
+
 
