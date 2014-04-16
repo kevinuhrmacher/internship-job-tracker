@@ -1,9 +1,111 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block content %}
 
-    {% for person in current_people %}
-    <h3>{{person.name}}</h3>
-    {% endfor %}
+<div id="city">
+    <div class="container">
+        <div class="row">
+            <h2>{{ organization.name }}</h2>
+            <hr />  
+            <div class="col-md-8 col-xs-12">
+                <div class="col-md-12">
+                    <h4>Description:</h4>
+                    <p>{{ organization.bio }}</p> 
+                </div>
+                <div class="col-md-12 organization-contact">
+                    <table class="col-md-3 col-sm-4 col-xs-4">
+                    <h4>MORE INFORMATION</h4>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>WEBSITE:</p>   
+                            </td>
+                            <td><p><a href="{{ organization.url }}" target="_blank">{{ organization.url }}</a></p></td>
+                        </tr>
+                            <td>
+                                <p>E-MAIL:</p>   
+                            </td>
+                            <td><p><a href="{{ organization.contact }}" target="_blank">{{ organization.contact }}</a></p></td>
+                        </tr>
+                            <td>
+                                <p>JOB OPENINGS:</p>   
+                            </td>
+                            <td><p><a href="{{ organization.opening }}" target="_blank">{{ organization.opening }}</a></p></td>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="col-md-4 organization-map">
+                <img src="http://api.tiles.mapbox.com/v3/afortune906.hnidfk42/{{ organization.longitude }},{{ organization.lat }},11/250x250.jpg"/>
+                <h6><span class="glyphicon glyphicon-map-marker"></span>{{ organization.address }}</h6>
+                <a href="{% url 'interactive_app_organization_list' %}">View all organizations</a>
+                <a class="twitter-timeline" href="{{ organization.twitter }}" data-widget-id="456475469009793024">Tweets by {{ organization.name }}</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 featured">
+                <h4>FEATURED</h4>
+                    <div class="col-md-4">
+                    {% for person in current_people %}
+                    <a href="{% url 'interactive_app_user' person.id%}">
+                        <img src="{% static 'img/' %}{{ person.img_url }}" class="img-circle">
+                        <h4>{{ person.name }}</h4>
+                        <p>{{ person.current_position }}</p>
+                        <a class="btn btn-default" href="{% url 'interactive_app_user' person.id%}" role="button">View Profile</a>
+                    </a>
+                    </div>
+                    {% endfor %}
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 working-here">
+                <h3>Tar Heels working here</h3>
+                
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#current" data-toggle="tab">Current</a></li>
+                    <li><a href="#previous" data-toggle="tab">Previous</a></li>
+                </ul>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="current">
+                        {% for person in current_people %}
+                        <div class="row">
+                        <a href="{% url 'interactive_app_user' person.id%}">
+                            <div class="span2">
+                                <img src="{% static 'img/' %}{{ person.img_url }}" class="img-thumbnail">  
+                            </div>
+                            <div class="span2">
+                                <h5>{{ person.name }}</h5>
+                                <p>{{ person.current_position }}</p>
+                                <p><strong>Major: </strong>{{ person.major }}- {{ person.skillset }}</p>
+                            </div>
+                            <div class="span2 profile-link">
+                                <a href="{% url 'interactive_app_user' person.id%}">View Profile &raquo;</a>
+                            </div>
+                        </a>
+                        </div>
+                        <hr />
+                        {% endfor %}
+                    </div>
+                    
+                    <div class="tab-pane" id="previous">
+                        <p>No information for previous people yet.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div> 
+    </div>
     
+
+
+</div>
+
 {% endblock %}
