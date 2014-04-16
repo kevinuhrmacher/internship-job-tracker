@@ -19,6 +19,11 @@ h1, h2, h4 {
     font-weight: bold;
 }
 
+h5{
+    font-size:18px;
+}
+
+
 
 p {
     font-family: @font;
@@ -26,18 +31,112 @@ p {
 }
 
 .list-box {
-    background-color: @light-gray;
-    text-align: center;
-    padding: 0px;
-    border: 10px solid white;
-    display: table-cell;
-    vertical-align: middle;
-    width: inherit;
+    float:left;
     h3 {
-        color: @dark-blue;
+        color: @light-blue;
         font-weight: bold;
-        margin-top: 7px;
+        margin: 6px 0px -8px 0px;
+        }
+    h5 {
+        color: white;
     }
+    margin-top:30px;
+}
+
+.opacity {
+    opacity:0.7;
+}
+
+
+img:hover {
+    opacity:1.0;
+}
+
+.list-box .text{
+    position:absolute;
+    top:110px;
+    left:15px;
+    width:220px;
+    height:inherit;
+    background-opacity:0.5;
+    background-color: rgba(36, 39, 38, 0.8);
+    opacity: none;
+    padding-left:20px;
+}
+
+.organization-map {
+    width:250px;
+    height:50px;
+    h6 {
+        margin-top:0px;
+        color:@cream;
+        background-color:@gray;
+        height:50px;
+        display: table-cell; 
+        vertical-align: middle; 
+        text-align: center;
+        width:250px;
+    }
+
+}
+
+.organization-contact {
+    background-color:@brown;
+    border-left: 3px solid @gray;
+    padding:5px 20px;
+    td, th {
+        display: table-cell;
+    }
+    h4 {
+        text-align:center;
+        color:@light-gray;
+    }
+    p {
+        color:@light-gray;
+        padding-right:20px;
+    }
+
+}
+
+
+.featured {
+    background-color:@light-gray;
+    text-align:center;
+    line-height:1.5px;
+    margin-top:20px;
+    .btn {
+        background-color:@light-blue;
+        border:none;
+        color:@light-gray;
+        text-shadow:none;
+    }
+    .img-circle {
+        width:140px;
+        height:140px;
+    }
+}
+
+.working-here {
+    .img-thumbnail{
+        width:90px;
+        height:90px;
+    }
+    .tab-content {
+        margin:20px 0px;
+        line-height:10px;
+    }
+}
+
+.profile-link {
+    float:right;
+}
+
+p a {
+    color:@light-blue;
+}
+
+a {
+    color:@light-blue;
 }
 
 }
