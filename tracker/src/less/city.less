@@ -10,7 +10,7 @@
 @gray: #242726;
 @light-gray: #E8EEF0;
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, body {
     font-family: @font;
     color: @gray;
 }
@@ -22,7 +22,6 @@ h1, h2, h4 {
 h5{
     font-size:18px;
 }
-
 
 
 
@@ -78,6 +77,7 @@ img:hover {
         text-align: center;
         width:250px;
     }
+
 }
 
 .organization-contact {
@@ -106,7 +106,7 @@ img:hover {
         background-color:@light-blue;
         border:none;
         color:@light-gray;
-        text-decoration:none;
+        text-shadow:none;
     }
     .img-circle {
         width:140px;
@@ -125,5 +125,16 @@ img:hover {
     }
 }
 
+.profile-link {
+    float:right;
+}
+
+p a {
+    color:@light-blue;
+}
+
+a {
+    color:@light-blue;
+}
 
 }

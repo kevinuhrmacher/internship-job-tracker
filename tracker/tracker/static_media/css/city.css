@@ -5778,7 +5778,8 @@ button.close {
 #city h4,
 #city h5,
 #city h6,
-#city p {
+#city p,
+#city body {
   font-family: 'Source Sans Pro';
   color: #242726;
 }
@@ -5863,7 +5864,7 @@ button.close {
   background-color: #9fc5ff;
   border: none;
   color: #e8eef0;
-  text-decoration: none;
+  text-shadow: none;
 }
 #city .featured .img-circle {
   width: 140px;
@@ -5876,4 +5877,13 @@ button.close {
 #city .working-here .tab-content {
   margin: 20px 0px;
   line-height: 10px;
+}
+#city .profile-link {
+  float: right;
+}
+#city p a {
+  color: #9fc5ff;
+}
+#city a {
+  color: #9fc5ff;
 }
