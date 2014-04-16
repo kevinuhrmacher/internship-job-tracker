@@ -5879,6 +5879,43 @@ button.close {
   margin: 20px 0px;
   line-height: 10px;
 }
+#city .working-here p {
+  color: #e8eef0;
+  padding-right: 20px;
+}
+#city .featured {
+  background-color: #e8eef0;
+  text-align: center;
+  line-height: 1.5px;
+  margin-top: 20px;
+}
+#city .featured .btn {
+  background-color: #9fc5ff;
+  border: none;
+  color: #e8eef0;
+  text-shadow: none;
+}
+#city .featured .img-circle {
+  width: 140px;
+  height: 140px;
+}
+#city .working-here .img-thumbnail {
+  width: 90px;
+  height: 90px;
+}
+#city .working-here .tab-content {
+  margin: 20px 0px;
+  line-height: 10px;
+}
+#city .profile-link {
+  float: right;
+}
+#city p a {
+  color: #9fc5ff;
+}
+#city a {
+  color: #9fc5ff;
+}
 #city .profile-link {
   float: right;
 }

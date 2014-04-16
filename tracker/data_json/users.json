@@ -13,7 +13,7 @@
 			"twitter":"https://twitter.com/anieldaniel",
 			"current_position":"Graphics Intern",
 			"current_city": 0,
-			"current_company": "The Washington Post",
+			"current_company": 0,
 			"img_url": "anniedaniel.jpeg"
 		}
 	},
@@ -31,7 +31,7 @@
 			"twitter":"https://twitter.com/jeffreylbowman",
 			"current_position":"Photo Intern",
 			"current_city": 3,
-			"current_company": "The News and Observer",
+			"current_company": 3,
 			"img_url": "jeffbowman.jpg"
 		}
 	},
@@ -49,7 +49,7 @@
 			"twitter":"https://twitter.com/JasonMillerCA",
 			"current_position":"Interactive Design Intern",
 			"current_city": 4,
-			"current_company": "The Miami Herald",
+			"current_company": 4,
 			"img_url": "jasonmiller.jpeg"
 		}
 	},
