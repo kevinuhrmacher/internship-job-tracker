@@ -5772,6 +5772,9 @@ button.close {
     display: none !important;
   }
 }
+#city {
+  /* Organization page */
+}
 #city h1,
 #city h2,
 #city h3,
@@ -5824,9 +5827,9 @@ button.close {
   opacity: none;
   padding-left: 20px;
 }
-#city .organization-map {
+#city .organization-map img {
+  height: 250px;
   width: 250px;
-  height: 50px;
 }
 #city .organization-map h6 {
   margin-top: 0px;
@@ -5841,7 +5844,8 @@ button.close {
 #city .organization-contact {
   background-color: #4e4947;
   border-left: 3px solid #242726;
-  padding: 5px 20px;
+  padding: 5px;
+  text-align: center;
 }
 #city .organization-contact td,
 #city .organization-contact th {
@@ -5853,7 +5857,6 @@ button.close {
 }
 #city .organization-contact p {
   color: #e8eef0;
-  padding-right: 20px;
 }
 #city .featured {
   background-color: #e8eef0;
@@ -5906,6 +5909,9 @@ button.close {
 #city .working-here .tab-content {
   margin: 20px 0px;
   line-height: 10px;
+}
+#city .tab-content {
+  margin-top: 20px;
 }
 #city .profile-link {
   float: right;
