@@ -41,9 +41,6 @@
 	      
 	      <a href="#"><span class="navbar-brand nav-logo">Ramses Rolodex</span></a>
 	      
-	      <ul class="nav navbar-nav">
-		<li><a href="#">About</a></li>
-	      </ul>
 	      
 	     <!-- Here goes the user preferences  --> 
 	      <ul class="nav navbar-nav">
@@ -55,7 +52,7 @@
 	<!-- If not logged in, they'll be prompted to do so.
 	     
 	     <ul class="nav navbar-nav">
-		<li><span class="loggedout-prompt"><a href="#">Log In </a>to store your preferences, or explore internships by <a href="#">type</a>, <a href="#">location</a>, or <a href="#">organization</a>.</span></li>
+		<li><span class="loggedout-prompt"><a href="#">Log In </a>to store your preferences, or explore internships by <a href="#">location</a>, or <a href="#">organization</a>.</span></li>
 	      </ul>-->
 
 	      
@@ -87,41 +84,33 @@
 </div>
 {% endblock %}
 
-{% block content %}
 <div class="container">
-</div>
+{% block content %}
 {% endblock %}
-
+</div>
 
 {% block footer %}
 <div id="base">
-	<div class="container">
-	<div class="container footer">
+	<div class="container footer ">
+		<div class="container">
+
+		
 		<div class="col-sm-3">
 			<h4>Ramses Rolodex</h4>
-			<img src="../../static_media/img/jschool-logo.png" class="footerlogo">
 		</div>
 		
-		<div class="col-sm-4">
-			<p><span class="firstcharacter">H</span>ere goes an about paragraph. It will probably have a dropcap and some great info about our project.It will probably have a dropcap and some great info about our project.It will probably have a dropcap and some great info about our project.It will probably have a dropcap and some great info about our project.It will probably have a dropcap and some great info about our project.</p>
+		
+		<div class="col-sm-3">
+			<a><p>About</p></a>
 		</div>
 		
-		<div class="col-sm-2">
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Cities</li>
-				<li><a href="#">Organizations</li>
-				<li><a href="#">Contact</li>
-				<li><a href="#">Help</li>
-			</ul>
+		<div class="col-sm-3">
 		</div>
 		
-		<div class="col-sm-1">
+		<div class="col-sm-3">
+			<a href="http://www.jomc.unc.edu"><img src="../../static_media/img/jschool-logo.png" class="footerlogo pull-right">
 		</div>
 		
-		<div class="col-sm-2">
-			<p>J-careers twitter API</p>
-		</div>
 	</div>
 	</div>
 </div>
