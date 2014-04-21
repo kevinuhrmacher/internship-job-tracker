@@ -54,10 +54,24 @@
 
 		     <!-- Here goes the user preferences  -->
 		      <ul class="nav navbar-nav">
-			<li class="preferences"><a href="/{{ user.typepref }}"><img class="typeicon-nav" src="../../static_media/img/coder-blue.png">DESIGNER{{ user.typepref }}</a></li>
-			<li class="preferences"><a href="/city/1">NORFOLK{{ user.citypref }}</a></li>
-			<li class="preferences"><a href="/organization/1">THE VIRGINIAN PILOT{{ user.organizationpref }}</a></li>
-		      </ul>
+
+      {% if request.user.is_authenticated %}
+      <li class="preferences"><a href="/{{ user.typepref }}"><img class="typeicon-nav" src="../../static_media/img/coder-blue.png">Skillset</a></li>
+			     {% if request.user.profile.current_city != None %}
+      <li class="preferences"><a href="/city/{{request.user.profile.current_city.id}}">{{ request.user.profile.current_city }}</a></li>
+			     {% else %}
+           <li class="preferences"><a href="/city/1">Your City is Blank</a></li>
+          {% endif %}
+          {% if request.user.profile.current_city != None %}
+      <li class="preferences"><a href="/organization/{{ request.user.profile.current_company.id }}">{{ request.user.profile.current_company }}</a></li>
+		      {% else %}
+          <li class="preferences"><a href="/organization/1">Your Company is Blank</a></li>
+          {% endif %}
+      {% else %}
+
+      {% endif %}
+
+      </ul>
 
 		<!-- If not logged in, they'll be prompted to do so.
 
