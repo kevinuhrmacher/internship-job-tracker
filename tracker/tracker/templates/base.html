@@ -87,6 +87,7 @@
       {% if request.user.is_authenticated %}
 
       <li><a href="{% url 'interactive_app_user' request.user.id %}"><span class=""><img style="height: 20px;"src="{{ request.user.profile.profile_image_url }}"/>&nbsp{{request.user.username|upper}}</span></a></li>
+      <li><a href="{% url 'profile_settings'%}">Settings</a></li>
       <li><a href="/accounts/logout/">Logout</a></li>
     </form>
     {%else%}
