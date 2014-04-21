@@ -115,4 +115,3 @@ myLayer.setGeoJSON(geoJson);
 map.scrollWheelZoom.disable();
 
 map.setView([45.908, -78.525], 4);
-//map.scrollWheelZoom.disable();

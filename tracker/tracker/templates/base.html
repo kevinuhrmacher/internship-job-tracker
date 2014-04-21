@@ -1,9 +1,11 @@
 <!--project template:  /templates/base.html -->
 
 <!DOCTYPE html>
+
 {% load i18n %}
 {% load account %}
 {% load url from future %}
+
 <html style="  position: relative;
   min-height: 100%"lang=en>
 <head>
@@ -13,6 +15,7 @@
 <!--     <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700' rel='stylesheet' type='text/css'>
     <link href="/static_media/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href="/static_media/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="/static_media/css/style.css" rel="stylesheet">
     <link href="/static_media/css/user.css" rel="stylesheet">
@@ -20,6 +23,7 @@
     <link href="/static_media/css/base.css" rel ="stylesheet">
     <link href="/static_media/css/home.css" rel ="stylesheet">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link href="/static_media/css/signup.css" rel ="stylesheet">
     <title>{% block title %}Internship-Job Tracker{% endblock %}</title>
 </head>
 	<!-- map styles -->
@@ -86,34 +90,13 @@
 
       {% if request.user.is_authenticated %}
 
-      <li><a href="{% url 'interactive_app_user' request.user.id %}"><span class=""><img style="height: 20px;"src="{{ request.user.profile.profile_image_url }}"/>{{request.user.username}}</span></a></li>
+      <li><a href="{% url 'interactive_app_user' request.user.id %}"><span class=""><img style="height: 20px;"src="{{ request.user.profile.profile_image_url }}"/>&nbsp{{request.user.username|upper}}</span></a></li>
       <li><a href="/accounts/logout/">Logout</a></li>
     </form>
     {%else%}
+
     <li><a href="/accounts/signup">Sign Up <img src=""></a></li>
-
-    <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log In<b class="caret"></b></a>
-      <ul class="dropdown-menu loginmodal">
-      <div class="form-group">
-        <form class="login" method="POST" action="{% url 'account_login' %}">
-    {% csrf_token %}
-      {{ form.non_field_errors }}
-      <input id="id_login" class="login-input" maxlength="30" name="login" placeholder="Username" type="text" />{{ form.login.errors }}<br>
-      <input id="id_password"  class="login-input" name="password" placeholder="Password" type="password" />{{ form.password.errors }}<br>
-      <div class="remember-forgot-section">
-          <input id="id_remember" name="remember" type="checkbox" />
-          <label for="id_remember">Remember Me</label>
-          <a class="forgot" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-      </div>
-    {% if redirect_field_value %}
-    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-    {% endif %}
-
-    <button class="btn" type="submit">{% trans "Sign In" %}</button>
-
-    <a href="/accounts/facebook/login/"><div class="fb"></div></a>
-    {% include "socialaccount/snippets/login_extra.html" %}
+    <li><a href="/accounts/login">Login<img src=""></a></li>
     {%endif%}
   </div>
 			  </ul>
@@ -155,7 +138,11 @@
 {% endblock %}
 
 
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> c3e23094163269d3b106f84fa152d77f710979f9
     <script src="/static_media/js/bootstrap.min.js"></script>
     <script src="/static_media/js/readmore.min.js"></script>
     <script src="/static_media/js/site.js"></script>
