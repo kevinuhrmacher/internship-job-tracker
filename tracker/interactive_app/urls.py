@@ -14,5 +14,5 @@ urlpatterns = patterns('',
     url(r'^organization/(?P<pk>\d+)$', views.organization, name='interactive_app_organization'),
     url(r'^city/$', views.cityList, name='interactive_app_city_list'),
     url(r'^city/(?P<pk>\d+)$', views.city, name='interactive_app_city'),
-    # url(r'^about/',views.about, name='interactive_app_about')
+    url(r'^about/', views.about, name='interactive_app_about')
     )
