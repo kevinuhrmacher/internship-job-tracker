@@ -5834,15 +5834,21 @@ button.close {
 }
 #base .footer {
   background-color: #242726;
+  line-height: 40px;
   margin: 0 0 0 0;
-  padding: 20px 10px 10px 10px;
+  padding: 5px 0 0 0;
+  width: 100%;
 }
 #base p {
   color: #e8eef0;
   font-weight: 100;
 }
+#base h4 {
+  color: #e8eef0;
+  font-weight: 700;
+}
 #base .footerlogo {
-  height: 50px;
+  height: 40px;
 }
 #base .firstcharacter {
   float: left;

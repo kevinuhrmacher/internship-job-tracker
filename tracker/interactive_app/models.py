@@ -56,7 +56,7 @@ class City(models.Model):
     def save(self, *args, **kwargs):
         self.name=self.name.upper()
         super(City, self).save(*args, **kwargs)
-        
+
 class Organization(models.Model):
     name = models.TextField(null=True)
     url = models.TextField(null=True)
@@ -103,8 +103,3 @@ class User(models.Model):
 class Position(models.Model):
     department = models.TextField(null=True)
     skillset = models.TextField(null=True)
-
-
-
-
-
