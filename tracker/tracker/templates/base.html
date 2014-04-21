@@ -4,7 +4,10 @@
 
 <html lang=en>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
+	<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700' rel='stylesheet' type='text/css'>
     <link href="/static_media/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static_media/css/bootstrap-responsive.css" rel="stylesheet">
@@ -13,11 +16,16 @@
     <link href="/static_media/css/city.css" rel ="stylesheet">
     <link href="/static_media/css/base.css" rel ="stylesheet">
     <link href="/static_media/css/home.css" rel ="stylesheet">
-    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
     <script type="text/javascript" src="/path/to/jquery-latest.js"></script>
     <script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script>
 
     <title>{% block title %}Internship-Job Tracker{% endblock %}</title>
+    
+    	<!-- map styles -->
+	<style>
+  		body { margin:0; padding:0; }
+  		#map { top:0; bottom:0; width:100%; height: 300px; }
+	</style>
 </head>
 
 <body>
