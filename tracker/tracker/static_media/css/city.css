@@ -5827,10 +5827,6 @@ button.close {
   opacity: none;
   padding-left: 20px;
 }
-#city .organization-map img {
-  height: 250px;
-  width: 250px;
-}
 #city .organization-map h6 {
   margin-top: 0px;
   color: #f8f3e8;
@@ -5839,7 +5835,7 @@ button.close {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  width: 250px;
+  width: 300px;
 }
 #city .organization-contact {
   background-color: #4e4947;
@@ -5848,16 +5844,21 @@ button.close {
   padding: 15px 0px 8px 0px;
 }
 #city .organization-contact h4 {
-  text-align: center;
+  text-align: left;
   color: #e8eef0;
+  padding-top: 6px;
 }
 #city .organization-contact p {
   color: #e8eef0;
 }
+#city .organization-contact img {
+  height: 50px;
+  width: 50px;
+}
 #city .featured {
   background-color: #e8eef0;
   text-align: center;
-  line-height: 1.5px;
+  line-height: 2px;
   margin-top: 20px;
 }
 #city .featured .btn {
