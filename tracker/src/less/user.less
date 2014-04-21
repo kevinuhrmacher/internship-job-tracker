@@ -28,6 +28,11 @@ body{
 		color: @base-font-color;
 		font-weight: @header-weight;
 	}
+	
+	.skillset-icon{
+		height: 1em;
+		margin: 0 10px 0 0;
+	}
 
 	.copy{
 		font-weight: @copy-weight;
@@ -41,7 +46,7 @@ body{
 		height: 100%;
 		margin: 0;
 		h3, p{
-			color:@profile-font-color
+			color:@profile-font-color;
 		}
 	}
 
@@ -54,6 +59,12 @@ body{
 	}
 	.img-info-box{
 		text-align: center;
+	}
+	
+	@media only screen and (max-device-width: 1000px) {
+	.profile-box {
+		border-right: none;
+		}
 	}
 
 }
