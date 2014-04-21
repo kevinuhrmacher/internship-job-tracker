@@ -18,17 +18,14 @@
     <link href="/static_media/css/city.css" rel ="stylesheet">
     <link href="/static_media/css/base.css" rel ="stylesheet">
     <link href="/static_media/css/home.css" rel ="stylesheet">
-    <script type="text/javascript" src="/path/to/jquery-latest.js"></script>
-    <script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script>
 
     <title>{% block title %}Internship-Job Tracker{% endblock %}</title>
-    
-    	<!-- map styles -->
+</head>
+	<!-- map styles -->
 	<style>
   		body { margin:0; padding:0; }
   		#map { top:0; bottom:0; width:100%; height: 300px; }
 	</style>
-</head>
 
 <body class="{% if request.user.is_authenticated %}logged-in{% else %}logged-out{% endif %}">
 {% block header %}

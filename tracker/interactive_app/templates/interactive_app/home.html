@@ -3,36 +3,29 @@
 {%load url from future %}
 
 {% block content %}
-</div>
+</div><!--container-->
 <div id="home">
-<div class="row">
-<div class="col-md-12" id="filters">
-<div class="contaner">
-<ul>
-    <li class="filters col-md-7">
-	      <ul>
-		<li class="types">I am looking for an internships in:&nbsp</li>
-		<li class="types active"><a href="#" class="active"><img src=""> VIEW ALL</a></li>
-		<li class="types"><a href="#"><img class="typeicon" src="../static_media/img/coder-blue.png"></a></li>
-		<li class="types"><a href="#"><img class="typeicon" src="../static_media/img/designer-blue.png"></a></li>
-		<li class="types"><a href="#"><img class="typeicon" src="../static_media/img/photog-blue.png"></a></li>
-		<li class="types"><a href="#"><img class="typeicon" src="../static_media/img/reporter-blue.png"></a></li>
-		<li class="types"><a href="#"><img class="typeicon" src="">other</a></li>
-	      </ul>
-    </li>
-    
-    <li class="filters col-md-3">
-	      <span class="types cityfilt">NATIONAL <b class=caret></b></span>
-	</li>
-    
-    <li class="filters col-md-2">
-		<span class="maptoggle"><a href="#" class="maptoggle active">MAP </a> | <a href="#" class="maptoggle">LIST</a></span>
-    </li>
-    
-</ul>
-</div>
-</div>
-</div>
+	<div id = "filters">
+		<div class="container">
+			<div class="row">
+				    <div class="col-md-7">
+				      <ul>
+						<li class="types">I am looking for an internships in:&nbsp</li>
+						<li class="types active"><a href="#" class="active"><img src=""> VIEW ALL</a></li>
+						<li class="types"><a href="#"><img class="typeicon" src="../static_media/img/coder-blue.png"></a></li>
+						<li class="types"><a href="#"><img class="typeicon" src="../static_media/img/designer-blue.png"></a></li>
+						<li class="types"><a href="#"><img class="typeicon" src="../static_media/img/photog-blue.png"></a></li>
+						<li class="types"><a href="#"><img class="typeicon" src="../static_media/img/reporter-blue.png"></a></li>
+						<li class="types"><a href="#"><img class="typeicon" src="">other</a></li>
+				      </ul>
+				    </div><!--col-->
+
+				    <div class="col-md-3 types cityfilt">NATIONAL <b class="caret"></b></div>
+
+				    <div class="col-md-2 maptoggle"><a href="#" class="maptoggle active">MAP </a> | <a href="#" class="maptoggle">LIST</a></div>
+			</div>
+		</div><!--container-->
+	</div><!--row-->
 <div id="map"></div>
 </div>
 {% for city in cities %}
