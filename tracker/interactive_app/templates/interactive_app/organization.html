@@ -9,16 +9,16 @@
         <h2>{{ organization.name }}</h2>
         <hr /> 
         <div class="col-md-8">
-            <h4>Description:</h4>
+            <h3>Description:</h3>
             <p>{{ organization.bio }}</p> 
         </div>
         <div class="col-md-4 hidden-sm hidden-xs organization-map">
-            <img src="http://api.tiles.mapbox.com/v3/afortune906.hnidfk42/{{ organization.longitude }},{{ organization.lat }},11/250x250.jpg"/>
-            <h6><span class="glyphicon glyphicon-map-marker"></span> {{ organization.address }}</h6>
-            <a href="{% url 'interactive_app_organization_list' %}">View all organizations</a>
+            <img src="http://api.tiles.mapbox.com/v3/afortune906.hnidfk42/{{ organization.longitude }},{{ organization.lat }},11/300x300.jpg"/>
+            <h6><i class="fa fa-map-marker"></i> {{ organization.address }}</h6>
+            <a href="{% url 'interactive_app_organization_list' %}">View all organizations &raquo;</a>
         </div>
     </div>
-    <div class="row">
+    <div class="row tab-content">
         <div class="col-md-8 organization-contact">
             <div class="col-md-3">
                 <h4>MORE INFORMATION:</h4>
@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <a class="twitter-timeline" href="{{ organization.twitter }}" data-tweet-limit="1" width="250" height="500" data-widget-id="456475469009793024">Tweets by {{ organization.name }}</a>
+            <a class="twitter-timeline" href="{{ organization.twitter }}" data-tweet-limit="1" width="300" height="500" data-widget-id="456475469009793024">Tweets by {{ organization.name }}</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div>
     </div>
