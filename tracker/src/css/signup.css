@@ -5772,62 +5772,19 @@ button.close {
     display: none !important;
   }
 }
-#home h1,
-#home h2,
-#home h3,
-#home h4,
-#home h5,
-#home h6,
-#home p,
-#home a,
-#home body,
-#home span {
-  color: #f8f3e8;
+#signup h1,
+#signup h2,
+#signup h3,
+#signup h4,
+#signup h5,
+#signup h6,
+#signup p,
+#signup body {
   font-family: 'Source Sans Pro';
+  color: #242726;
 }
-#home a,
-#home .link {
-  color: #9fc5ff;
-}
-#home a:hover {
-  color: #6ca6ff;
-  text-decoration: none;
-}
-#filters {
-  background-color: #242726;
-  padding: 5px 0 10px 5px;
-  margin-top:-20px;
-  background-color: #242726;
-  height: 100%;
-}
-#home .filters {
-  display: block;
-  float: left;
-  background-color: #242726;
-}
-#home .types {
-  color: #f8f3e8;
-  display: block;
-  float: left;
-}
-#home .typeicon {
-  height: 25px;
-  margin: 0 5px 0 10px;
-}
-#home .typeicon:hover {
-  opacity: .5;
-}
-#home .cityfilt {
-  border: 1px solid #f8f3e8;
-  padding: 2px 20px 2px 20px;
-}
-#home .caret {
-  margin: 0 0 0 20px;
-}
-#home .maptoggle {
-  font-family: 'Source Sans Pro';
-  color: #f8f3e8;
-}
-#home .maptoggle:active {
-  font-style: bold;
+#signup h1,
+#signup h2,
+#signup h4 {
+  font-weight: 700;
 }
