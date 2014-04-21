@@ -48,7 +48,8 @@ def cityList(request):
 
 def organization(request,pk):
     organization = get_object_or_404(Organization, id=pk)
-    current_people = User.objects.filter(current_company = pk)        
+    current_people = User.objects.filter(current_company = pk)
+           
     return render(request, "interactive_app/organization.html", {'organization':organization, 'current_people': current_people})
 
 def organizationList(request):
