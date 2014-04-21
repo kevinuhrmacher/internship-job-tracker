@@ -5793,14 +5793,9 @@ button.close {
   color: #6ca6ff;
   text-decoration: none;
 }
-#home #filters {
+#filters {
   background-color: #242726;
-  margin: -40px 0 0 0;
   padding: 5px 0 10px 5px;
-}
-#home .filters {
-  display: block;
-  float: left;
   background-color: #242726;
 }
 #home .types {
