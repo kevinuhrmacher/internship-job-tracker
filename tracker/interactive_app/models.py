@@ -43,14 +43,14 @@ class Organization(models.Model):
 
 class UserProfile(models.Model):
     SKILLSET_CHOICES = (
-      ('D', 'Designer'),
-      ('Pr', 'Programmer'),
-      ('Ph', 'Photographer'),
-      ('J', 'Journalist'),
+      ('Design', 'Designer'),
+      ('Coder', 'Programmer'),
+      ('Photo', 'Photographer'),
+      ('Reporting', 'Reporter'),
     )
 
     user = models.OneToOneField(User, related_name='profile')
-    skillset = models.CharField(max_length=1,choices=SKILLSET_CHOICES)
+    skillset = models.CharField(max_length=10,choices=SKILLSET_CHOICES)
     email = models.TextField(null=True, blank=True)
     graduation_year = models.TextField(null=True, blank=True)
     bio = models.TextField(null=True, blank=True)
