@@ -1,5 +1,4 @@
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
-/* This is the file we want */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5773,6 +5772,9 @@ button.close {
     display: none !important;
   }
 }
+#city {
+  /* Organization page */
+}
 #city h1,
 #city h2,
 #city h3,
@@ -5825,9 +5827,9 @@ button.close {
   opacity: none;
   padding-left: 20px;
 }
-#city .organization-map {
+#city .organization-map img {
+  height: 250px;
   width: 250px;
-  height: 50px;
 }
 #city .organization-map h6 {
   margin-top: 0px;
@@ -5842,17 +5844,42 @@ button.close {
 #city .organization-contact {
   background-color: #4e4947;
   border-left: 3px solid #242726;
-  padding: 5px 20px;
-}
-#city .organization-contact td,
-#city .organization-contact th {
-  display: table-cell;
+  text-align: center;
+  padding: 15px 0px 8px 0px;
 }
 #city .organization-contact h4 {
   text-align: center;
   color: #e8eef0;
 }
 #city .organization-contact p {
+  color: #e8eef0;
+}
+#city .featured {
+  background-color: #e8eef0;
+  text-align: center;
+  line-height: 1.5px;
+  margin-top: 20px;
+}
+#city .featured .btn {
+  background-color: #9fc5ff;
+  border: none;
+  color: #e8eef0;
+  text-shadow: none;
+  margin-bottom: 20px;
+}
+#city .featured .img-circle {
+  width: 140px;
+  height: 140px;
+}
+#city .working-here .img-thumbnail {
+  width: 90px;
+  height: 90px;
+}
+#city .working-here .tab-content {
+  margin: 20px 0px;
+  line-height: 10px;
+}
+#city .working-here p {
   color: #e8eef0;
   padding-right: 20px;
 }
@@ -5879,6 +5906,18 @@ button.close {
 #city .working-here .tab-content {
   margin: 20px 0px;
   line-height: 10px;
+}
+#city .tab-content {
+  margin-top: 20px;
+}
+#city .profile-link {
+  float: right;
+}
+#city p a {
+  color: #9fc5ff;
+}
+#city a {
+  color: #9fc5ff;
 }
 #city .profile-link {
   float: right;

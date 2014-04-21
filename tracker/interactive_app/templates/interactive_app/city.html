@@ -4,10 +4,11 @@
 {% block content %}
 
 <div id="city">
-
+<div class="container">
     <div class="row">
+        <h1>Welcome to {{ city.name }}</h1>
+        <hr />
         <div class="col-md-6">
-            <h1>Welcome to {{ city.name }}</h1>
             <div class="col-md-12">
                 <h3>Tar Heels working here:</h3>
                 <table class="table table-striped">
@@ -51,7 +52,7 @@
         </div>
 
     </div>
-
+</div>
 </div>
    
 {% endblock %}
