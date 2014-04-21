@@ -38,14 +38,12 @@
 	      </button>
 	    </div>
 
-<<<<<<< HEAD
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse">
 
-		      <a href="#"><span class="navbar-brand nav-logo">Ramses Rolodex</span></a>
+		      <a href="{% url 'interactive_app_home'%}"><span class="navbar-brand nav-logo">Ramses Rolodex</span></a>
 
 		      <ul class="nav navbar-nav">
-			<li><a href="#">About</a></li>
 		      </ul>
 
 		     <!-- Here goes the user preferences  -->
@@ -63,7 +61,7 @@
 
 
 		      <ul class="nav navbar-nav navbar-right">
-		<body class="{% if request.user.is_authenticated %}logged-in{% else %}logged-out{% endif %}">
+
       <!--
       {% if request.user.is_authenticated %}
     <a href="/accounts/logout/" class="pull-right">Logout</a>
@@ -79,31 +77,38 @@
     <a href="/accounts/login/" class="pull-right">Login</a>
 
       {% endif %}-->
-			<li><a href="#">Sign Up <img src=""></a></li>
 
-			<li class="dropdown">
-			  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log In<b class="caret"></b></a>
-			  <ul class="dropdown-menu loginmodal">
-				<div class="form-group">
-          <form class="login" method="POST" action="{% url 'account_login' %}">
-      {% csrf_token %}
-        {{ form.non_field_errors }}
-        <input id="id_login" class="login-input" maxlength="30" name="login" placeholder="Username" type="text" />{{ form.login.errors }}<br>
-        <input id="id_password"  class="login-input" name="password" placeholder="Password" type="password" />{{ form.password.errors }}<br>
-        <div class="remember-forgot-section">
-            <input id="id_remember" name="remember" type="checkbox" />
-            <label for="id_remember">Remember Me</label>
-            <a class="forgot" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-        </div>
-      {% if redirect_field_value %}
-      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-      {% endif %}
+      {% if request.user.is_authenticated %}
 
-      <button class="btn" type="submit">{% trans "Sign In" %}</button>
-
-      <a href="/accounts/facebook/login/"><div class="fb"></div></a>
-      {% include "socialaccount/snippets/login_extra.html" %}
+      <li><a href="{% url 'interactive_app_user' request.user.id %}"><span class=""><img style="height: 20px;"src="{{ request.user.profile.profile_image_url }}"/>{{request.user.username}}</span></a></li>
+      <li><a href="/accounts/logout/">Logout</a></li>
     </form>
+    {%else%}
+    <li><a href="/accounts/signup">Sign Up <img src=""></a></li>
+
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log In<b class="caret"></b></a>
+      <ul class="dropdown-menu loginmodal">
+      <div class="form-group">
+        <form class="login" method="POST" action="{% url 'account_login' %}">
+    {% csrf_token %}
+      {{ form.non_field_errors }}
+      <input id="id_login" class="login-input" maxlength="30" name="login" placeholder="Username" type="text" />{{ form.login.errors }}<br>
+      <input id="id_password"  class="login-input" name="password" placeholder="Password" type="password" />{{ form.password.errors }}<br>
+      <div class="remember-forgot-section">
+          <input id="id_remember" name="remember" type="checkbox" />
+          <label for="id_remember">Remember Me</label>
+          <a class="forgot" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+      </div>
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+
+    <button class="btn" type="submit">{% trans "Sign In" %}</button>
+
+    <a href="/accounts/facebook/login/"><div class="fb"></div></a>
+    {% include "socialaccount/snippets/login_extra.html" %}
+    {%endif%}
   </div>
 			  </ul>
 			</li>
@@ -111,52 +116,6 @@
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
-=======
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse">
-	      
-	      <a href="#"><span class="navbar-brand nav-logo">Ramses Rolodex</span></a>
-	      
-	      
-	     <!-- Here goes the user preferences  --> 
-	      <ul class="nav navbar-nav">
-		<li class="preferences"><a href="/{{ user.typepref }}"><img class="typeicon-nav" src="../../static_media/img/coder-blue.png">DESIGNER{{ user.typepref }}</a></li>
-		<li class="preferences"><a href="/city/1">NORFOLK{{ user.citypref }}</a></li>
-		<li class="preferences"><a href="/organization/1">THE VIRGINIAN PILOT{{ user.organizationpref }}</a></li>
-	      </ul>
-		
-	<!-- If not logged in, they'll be prompted to do so.
-	     
-	     <ul class="nav navbar-nav">
-		<li><span class="loggedout-prompt"><a href="#">Log In </a>to store your preferences, or explore internships by <a href="#">location</a>, or <a href="#">organization</a>.</span></li>
-	      </ul>-->
-
-	      
-	      <ul class="nav navbar-nav navbar-right">
-	
-		<li><a href="#">Sign Up <img src="">ICON</a></li>
-
-		<li class="dropdown">
-		  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log In<b class="caret"></b></a>
-		  <ul class="dropdown-menu loginmodal">
-		    <li>Email</li>
-			<div class="form-group">
-			  <form type="text" class="form-control" placeholder=""></form>
-			</div>
-		     <li>Password</li>
-			<div class="form-group">
-			  <form type="text" class="form-control" placeholder=""></form>
-			</div>
-		<button>Submit</button>
-			<hr>
-		    <li><a href="#">Or, sign in with Facebook here</a></li>
-		  </ul>
-		</li>
-	      </ul>
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
-	</nav>
->>>>>>> 44c7d3292930e18a62c6f8f611eab38fdbe67086
 </header>
 </div>
 {% endblock %}
@@ -171,23 +130,23 @@
 	<div class="container footer ">
 		<div class="container">
 
-		
+
 		<div class="col-sm-3">
 			<h4>Ramses Rolodex</h4>
 		</div>
-		
-		
+
+
 		<div class="col-sm-3">
 			<a><p>About</p></a>
 		</div>
-		
+
 		<div class="col-sm-3">
 		</div>
-		
+
 		<div class="col-sm-3">
 			<a href="http://www.jomc.unc.edu"><img src="../../static_media/img/jschool-logo.png" class="footerlogo pull-right">
 		</div>
-		
+
 	</div>
 	</div>
 </div>
