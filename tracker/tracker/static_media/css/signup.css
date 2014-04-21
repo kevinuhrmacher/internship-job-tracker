@@ -5773,7 +5773,9 @@ button.close {
   }
 }
 #signup {
-  padding: 50px 0 50px 0;
+  background-size: 100%;
+  background-image: url(../../static_media/img/rolodex-signup2.png);
+  padding: 50px 0 50px 50px;
 }
 #signup h1,
 #signup h2,
@@ -5790,6 +5792,9 @@ button.close {
 #signup h2,
 #signup h4 {
   font-weight: 800;
+}
+#signup a:hover {
+  text-decoration: none;
 }
 #signup textarea,
 #signup input[type="text"],
@@ -5808,4 +5813,18 @@ button.close {
 #signup input[type="color"],
 #signup .uneditable-input {
   height: 2em;
+}
+#signup .signuppng {
+  height: 10em;
+  overflow: hidden;
+}
+#signup button.btn {
+  background-color: #4b5485;
+  color: #f8f3e8;
+  text-decoration: none;
+}
+@media (max-width: 1024px) {
+  #signup {
+    background-image: none;
+  }
 }

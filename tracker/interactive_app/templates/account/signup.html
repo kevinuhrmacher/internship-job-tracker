@@ -8,11 +8,11 @@
 {% block content %}
 
 <div id="signup">
-    <h2>Welcome to Rolodex.</h2>
-    <p>Sign up for x, y, z here and here and here.</p>
 
     <div class="row">
         <div class="col-md-4">
+            <h2>Welcome to Rolodex.</h2>
+            <p>Sign up for x, y, z here and here and here.</p>
             <div class="inset">
                 <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
                   {% csrf_token %}
@@ -36,9 +36,9 @@
             </div>
         </div>
         
-        <div class="col-md-8">
-            <img src="#">
+        <div class="col-md-8 container">
         </div>
-    </div>        
+    </div>
+
 </div>
 {% endblock %}
