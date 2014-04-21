@@ -20,6 +20,10 @@ body {
   color: #484847;
   font-weight: 600;
 }
+#user .skillset-icon {
+  height: 1em;
+  margin: 0 10px 0 0;
+}
 #user .copy {
   font-weight: 400;
 }
@@ -44,4 +48,9 @@ body {
 }
 #user .img-info-box {
   text-align: center;
+}
+@media (max-width: 768px) {
+  #user .profile-box {
+    border-right: none;
+  }
 }
