@@ -16,10 +16,10 @@
 		"model":"interactive_app.City",
 		"fields":{
 			"name": "Norfolk",
-                        "state": "Virginia",
-                        "lat": "36.850769",
+            "state": "Virginia",
+            "lat": "36.850769",
 			"longitude": "-76.285873",
-                        "img_url": "norfolkva.jpg"
+            "img_url": "norfolkva.jpg"
 		}
 	},
         
