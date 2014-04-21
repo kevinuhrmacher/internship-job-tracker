@@ -5844,12 +5844,8 @@ button.close {
 #city .organization-contact {
   background-color: #4e4947;
   border-left: 3px solid #242726;
-  padding: 5px;
   text-align: center;
-}
-#city .organization-contact td,
-#city .organization-contact th {
-  display: table-cell;
+  padding: 15px 0px 8px 0px;
 }
 #city .organization-contact h4 {
   text-align: center;
@@ -5869,6 +5865,7 @@ button.close {
   border: none;
   color: #e8eef0;
   text-shadow: none;
+  margin-bottom: 20px;
 }
 #city .featured .img-circle {
   width: 140px;

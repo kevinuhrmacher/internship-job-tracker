@@ -4,6 +4,7 @@
 {% block content %}
 
 <div id="city">
+<div class="container">
     <div class="row">
         <h2>{{ organization.name }}</h2>
         <hr /> 
@@ -13,28 +14,30 @@
         </div>
         <div class="col-md-4 hidden-sm hidden-xs organization-map">
             <img src="http://api.tiles.mapbox.com/v3/afortune906.hnidfk42/{{ organization.longitude }},{{ organization.lat }},11/250x250.jpg"/>
-            <h6><span class="glyphicon glyphicon-map-marker"></span>{{ organization.address }}</h6>
+            <h6><span class="glyphicon glyphicon-map-marker"></span> {{ organization.address }}</h6>
             <a href="{% url 'interactive_app_organization_list' %}">View all organizations</a>
         </div>
     </div>
     <div class="row">
         <div class="col-md-8 organization-contact">
-            <h4>MORE INFORMATION</h4>
-                <div class="col-md-4">
-                    <a href="{{ organization.url }}"><img src="icon.jpg" alt="website" width="42" height="42"></a>
-                    <p>Website</p>
-                </div>
-                <div class="col-md-4">
-                    <a href="{{ organization.contact }}"><img src="icon.jpg" alt="email" width="42" height="42"></a>
-                    <p>E-mail</p>
-                </div>
-                <div class="col-md-4">
-                    <a href="{{ organization.opening }}"><img src="icon.jpg" alt="openings" width="42" height="42"></a>
-                    <p>Job Openings</p>
-                </div>
+            <div class="col-md-3">
+                <h4>MORE INFORMATION:</h4>
+            </div>
+            <div class="col-md-3">
+                <a href="{{ organization.url }}" target="_blank"><img src="../static_media/img/website.png" alt="website" width="42" height="42"></a>
+                <p>Website</p>
+            </div>
+            <div class="col-md-3">
+                <a href="mailto:{{ organization.contact }}" target="_top"><img src="../static_media/img/email.png" alt="email" width="42" height="42"></a>
+                <p>E-mail</p>
+            </div>
+            <div class="col-md-3">
+                <a href="{{ organization.opening }}" target="_blank"><img src="../static_media/img/openings.png" alt="openings" width="42" height="42"></a>
+                <p>Job Openings</p>
+            </div>
         </div>
         <div class="col-md-4">
-            <a class="twitter-timeline" href="{{ organization.twitter }}" data-widget-id="456475469009793024">Tweets by {{ organization.name }}</a>
+            <a class="twitter-timeline" href="{{ organization.twitter }}" data-tweet-limit="1" width="250" height="500" data-widget-id="456475469009793024">Tweets by {{ organization.name }}</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div>
     </div>
@@ -53,6 +56,7 @@
     </div>
     
     <div id="city">
+    <div class="container">
         <div class="row">
         <div class="col-md-12">
             <h3>Tar Heels working here</h3>
@@ -91,8 +95,8 @@
         </div>
         </div>
     </div>
-        
-        
+    </div>
+</div>   
 </div>
 
 
