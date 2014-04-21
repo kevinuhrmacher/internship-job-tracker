@@ -49,7 +49,7 @@ body {
 #user .img-info-box {
   text-align: center;
 }
-@media only screen and (max-device-width: 1000px) {
+@media (max-width: 768px) {
   #user .profile-box {
     border-right: none;
   }
