@@ -5772,6 +5772,9 @@ button.close {
     display: none !important;
   }
 }
+#base {
+  /* footer stuck to bottom of page */
+}
 #base h1,
 #base h2,
 #base h3,
@@ -5859,4 +5862,28 @@ button.close {
   margin: 3px 0 0 0;
   padding: 4px 8px 0 3px;
   font-family: 'Source Sans Pro';
+}
+#base body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+#base #container {
+  min-height: 100%;
+  position: relative;
+}
+#base #body {
+  padding: 10px;
+  padding-bottom: 60px;
+  /* Height of the footer */
+}
+#base #footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  /* Height of the footer */
+}
+#base #404page {
+  background-color: #63f;
 }
