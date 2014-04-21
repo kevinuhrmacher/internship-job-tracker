@@ -4,7 +4,8 @@
 {% load i18n %}
 {% load account %}
 {% load url from future %}
-<html lang=en>
+<html style="  position: relative;
+  min-height: 100%"lang=en>
 <head>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
     <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
@@ -24,10 +25,10 @@
 	<!-- map styles -->
 	<style>
   		body { margin:0; padding:0; }
-  		#map { top:0; bottom:0; width:100%; height: 500px; }
+  		#map { top:0; bottom:0; width:100%; height: 700px; }
 	</style>
 
-<body class="{% if request.user.is_authenticated %}logged-in{% else %}logged-out{% endif %}">
+<body style = "margin-bottom: 60px" class="{% if request.user.is_authenticated %}logged-in{% else %}logged-out{% endif %}">
 {% block header %}
 <div id="base">
 <header>
@@ -132,27 +133,23 @@
 
 {% block footer %}
 <div id="base">
-	<div class="container footer ">
+	<div class="footer ">
 		<div class="container">
+      <div class="row">
 
+    		<div class="col-sm-3">
+    			<h4>Ramses Rolodex</h4>
+    		</div>
 
-		<div class="col-sm-3">
-			<h4>Ramses Rolodex</h4>
-		</div>
+    		<div class="col-sm-3">
+    			<a><p>About</p></a>
+    		</div>
 
-
-		<div class="col-sm-3">
-			<a><p>About</p></a>
-		</div>
-
-		<div class="col-sm-3">
-		</div>
-
-		<div class="col-sm-3">
-			<a href="http://www.jomc.unc.edu"><img src="../../static_media/img/jschool-logo.png" class="footerlogo pull-right">
-		</div>
-
-	</div>
+    		<div class="col-sm-offset-3 col-sm-3">
+    			<a href="http://www.jomc.unc.edu"><img src="../../static_media/img/jschool-logo.png" class="footerlogo pull-right"></a>
+    		</div>
+    </div>
+	 </div>
 	</div>
 </div>
 {% endblock %}

@@ -5796,7 +5796,9 @@ button.close {
 #filters {
   background-color: #242726;
   padding: 5px 0 10px 5px;
+  margin-top:-20px;
   background-color: #242726;
+  height: 100%;
 }
 #home .types {
   color: #f8f3e8;

@@ -29,8 +29,7 @@ var geoJson = [
       "title": "The Washington Post",
       "url": "/city/0",
       "marker-color": "#fc4353",
-      "marker-size": "large",
-      "marker-symbol": "monument"
+      "marker-size": "large"
     }
   },
   {
@@ -44,7 +43,6 @@ var geoJson = [
       "url": "/city/1",
       "marker-color": "#fc4353",
       "marker-size": "large",
-      "marker-symbol": "monument"
     }
   },
   {
@@ -57,8 +55,7 @@ var geoJson = [
       "title": "The Denver Post",
       "url": "/city/2",
       "marker-color": "#fc4353",
-      "marker-size": "large",
-      "marker-symbol": "monument"
+      "marker-size": "large"
     }
   },
   {
@@ -71,8 +68,7 @@ var geoJson = [
       "title": "The News and Observer",
       "url": "/city/3",
       "marker-color": "#fc4353",
-      "marker-size": "large",
-      "marker-symbol": "monument"
+      "marker-size": "large"
     }
   },
   {
@@ -85,8 +81,7 @@ var geoJson = [
       "title": "The Miami Herald",
       "url":"/city/4",
       "marker-color": "#fc4353",
-      "marker-size": "large",
-      "marker-symbol": "monument"
+      "marker-size": "large"
     }
   }
 ];
