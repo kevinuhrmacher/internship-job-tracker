@@ -9,13 +9,16 @@
 <!--     <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700' rel='stylesheet' type='text/css'>
     <link href="/static_media/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href="/static_media/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="/static_media/css/style.css" rel="stylesheet">
     <link href="/static_media/css/user.css" rel="stylesheet">
     <link href="/static_media/css/city.css" rel ="stylesheet">
     <link href="/static_media/css/base.css" rel ="stylesheet">
     <link href="/static_media/css/home.css" rel ="stylesheet">
+    <link href="/static_media/css/signup.css" rel ="stylesheet">
 
+    
     <title>{% block title %}Internship-Job Tracker{% endblock %}</title>
 </head>
 	<!-- map styles -->
@@ -82,11 +85,12 @@
 
       {% if request.user.is_authenticated %}
 
-      <li><a href="{% url 'interactive_app_user' request.user.id %}"><span class=""><img style="height: 20px;"src="{{ request.user.profile.profile_image_url }}"/>{{request.user.username}}</span></a></li>
+      <li><a href="{% url 'interactive_app_user' request.user.id %}"><span class=""><img style="height: 20px;"src="{{ request.user.profile.profile_image_url }}"/>&nbsp{{request.user.username|upper}}</span></a></li>
       <li><a href="/accounts/logout/">Logout</a></li>
     </form>
     {%else%}
-    <li><a href="/accounts/signup">Sign Up<img src=""></a></li>
+
+    <li><a href="/accounts/signup">Sign Up <img src=""></a></li>
     <li><a href="/accounts/login">Login<img src=""></a></li>
     {%endif%}
   </div>
