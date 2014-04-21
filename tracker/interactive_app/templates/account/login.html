@@ -4,6 +4,10 @@
 {% load url from future %}
 
 {% block content %}
+<div id="signup">
+    <h2>Welcome back.</h2>
+    <p>Sign in.</p>
+    
     <a href="/accounts/facebook/login/"><div class="fb"></div></a>
     {% include "socialaccount/snippets/login_extra.html" %}
     <div class="inset">
@@ -29,4 +33,5 @@
             Don't have an account? Login with Facebook above or <a href="{% url 'account_signup' %}">Sign Up</a>
         </div>
     </div>
+</div>
 {% endblock %}

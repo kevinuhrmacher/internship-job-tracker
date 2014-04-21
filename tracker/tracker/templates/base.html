@@ -16,7 +16,9 @@
     <link href="/static_media/css/city.css" rel ="stylesheet">
     <link href="/static_media/css/base.css" rel ="stylesheet">
     <link href="/static_media/css/home.css" rel ="stylesheet">
+    <link href="/static_media/css/signup.css" rel ="stylesheet">
 
+    
     <title>{% block title %}Internship-Job Tracker{% endblock %}</title>
 </head>
 	<!-- map styles -->
@@ -83,12 +85,12 @@
 
       {% if request.user.is_authenticated %}
 
-      <li><a href="{% url 'interactive_app_user' request.user.id %}"><span class=""><img style="height: 20px;"src="{{ request.user.profile.profile_image_url }}"/>{{request.user.username}}</span></a></li>
+      <li><a href="{% url 'interactive_app_user' request.user.id %}"><span class=""><img style="height: 20px;"src="{{ request.user.profile.profile_image_url }}"/>&nbsp{{request.user.username|upper}}</span></a></li>
       <li><a href="/accounts/logout/">Logout</a></li>
     </form>
     {%else%}
 
-    <li><a href="/accounts/signup">Sign Up<img src=""></a></li>
+    <li><a href="/accounts/signup">Sign Up <img src=""></a></li>
     <li><a href="/accounts/login">Login<img src=""></a></li>
     {%endif%}
   </div>
