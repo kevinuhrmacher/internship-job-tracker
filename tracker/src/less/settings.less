@@ -1,6 +1,6 @@
 @import 'bootstrap/bootstrap.less';
 
-#signup{
+#settings{
 
     @font: 'Source Sans Pro';
     @cream: #F8F3E8;
@@ -14,14 +14,15 @@
     
     background-size:100%;
     background-image: url(../../static_media/img/rolodex-signup2.png);
-    padding: 50px 0 50px 50px;
+    background-repeat: no-repeat;
+    padding: 0 0 50px 50px;
     
     h1, h2, h3, h4, h5, h6, p, body {
         font-family: @font;
         color: @gray;
     }
     
-    h1, h2, h4 {
+    h1, h2, h3, h4 {
         font-weight: 800;
     }
     
@@ -29,8 +30,29 @@
         text-decoration: none;
     }
     
+    label {
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    
     textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
         height: 2em;
+        float:right;
+        width: 100%;
+        margin: 0 0 15px 0;
+    }
+    
+    textarea#id_bio{
+        height: 5em;
+    }
+    
+    textarea#id_img_url{
+        height: 3em;
+    }
+    
+    select#id_skillset {
+        background-color: none;
+        width: 100%;
     }
     
     .signuppng {
@@ -44,18 +66,11 @@
         text-decoration: none;
     }
     
-    ul.errorlist{
-        background-color: @alert;
-        border: 1px @alert-dark solid;
-        list-style-type: none;
-        margin: 10px 0 10px 0px;
-        padding: 5px 10px 5px 10px;
-    }
 
 }
 
     @media (max-width: 1024px) {
-    #signup {
+    #settings {
         background-image: none;
         }
     }

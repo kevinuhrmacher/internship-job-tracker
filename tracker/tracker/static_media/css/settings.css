@@ -5772,66 +5772,78 @@ button.close {
     display: none !important;
   }
 }
-#signup {
+#settings {
   background-size: 100%;
   background-image: url(../../static_media/img/rolodex-signup2.png);
-  padding: 50px 0 50px 50px;
+  background-repeat: no-repeat;
+  padding: 0 0 50px 50px;
 }
-#signup h1,
-#signup h2,
-#signup h3,
-#signup h4,
-#signup h5,
-#signup h6,
-#signup p,
-#signup body {
+#settings h1,
+#settings h2,
+#settings h3,
+#settings h4,
+#settings h5,
+#settings h6,
+#settings p,
+#settings body {
   font-family: 'Source Sans Pro';
   color: #242726;
 }
-#signup h1,
-#signup h2,
-#signup h4 {
+#settings h1,
+#settings h2,
+#settings h3,
+#settings h4 {
   font-weight: 800;
 }
-#signup a:hover {
+#settings a:hover {
   text-decoration: none;
 }
-#signup textarea,
-#signup input[type="text"],
-#signup input[type="password"],
-#signup input[type="datetime"],
-#signup input[type="datetime-local"],
-#signup input[type="date"],
-#signup input[type="month"],
-#signup input[type="time"],
-#signup input[type="week"],
-#signup input[type="number"],
-#signup input[type="email"],
-#signup input[type="url"],
-#signup input[type="search"],
-#signup input[type="tel"],
-#signup input[type="color"],
-#signup .uneditable-input {
-  height: 2em;
+#settings label {
+  font-weight: 400;
+  text-transform: uppercase;
 }
-#signup .signuppng {
+#settings textarea,
+#settings input[type="text"],
+#settings input[type="password"],
+#settings input[type="datetime"],
+#settings input[type="datetime-local"],
+#settings input[type="date"],
+#settings input[type="month"],
+#settings input[type="time"],
+#settings input[type="week"],
+#settings input[type="number"],
+#settings input[type="email"],
+#settings input[type="url"],
+#settings input[type="search"],
+#settings input[type="tel"],
+#settings input[type="color"],
+#settings .uneditable-input {
+  height: 2em;
+  float: right;
+  width: 100%;
+  margin: 0 0 15px 0;
+}
+#settings textarea#id_bio {
+  height: 5em;
+}
+#settings textarea#id_img_url {
+  height: 3em;
+}
+#settings select#id_skillset {
+  background-color: none;
+  width: 100%;
+}
+#settings .signuppng {
   height: 8em;
   overflow: hidden;
 }
-#signup button.btn {
+#settings button.btn {
   background-color: #4b5485;
   color: #f8f3e8;
   text-decoration: none;
 }
-#signup ul.errorlist {
-  background-color: #f2dede;
-  border: 1px #bd362f solid;
-  list-style-type: none;
-  margin: 10px 0 10px 0px;
-  padding: 5px 10px 5px 10px;
-}
 @media (max-width: 1024px) {
-  #signup {
+  #settings {
     background-image: none;
   }
 }

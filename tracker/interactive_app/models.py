@@ -43,10 +43,10 @@ class Organization(models.Model):
 
 class UserProfile(models.Model):
     SKILLSET_CHOICES = (
-      ('D', 'Designer'),
-      ('Pr', 'Programmer'),
-      ('Ph', 'Photographer'),
-      ('J', 'Journalist'),
+      ('Design', 'Designer'),
+      ('Coder', 'Programmer'),
+      ('Photo', 'Photographer'),
+      ('Reporting', 'Journalist'),
     )
 
     user = models.OneToOneField(User, related_name='profile')
