@@ -3,13 +3,28 @@
 
 {% block content %}
 <div id="user">
-	<h2>Profiles</h2>
+	<h1><i class="fa fa-list"></i> SEARCH THE DATABASE</h2>
+	<hr />
+	
+	<div class="row">
+		<div class="col-md-12">
+			<ul>
+				<li class="types active"><a href="#" class="active"><img src=""> VIEW ALL</a></li>
+				<li class="types"><a href="#"><img class="typeicon" src="../static_media/img/coder-blue.png">CODING</a></li>
+				<li class="types"><a href="#"><img class="typeicon" src="../static_media/img/design-blue.png">DESIGN</a></li>
+				<li class="types"><a href="#"><img class="typeicon" src="../static_media/img/photo-blue.png">PHOTO/VIDEO</a></li>
+				<li class="types"><a href="#"><img class="typeicon" src="../static_media/img/reporting-blue.png">REPORTING</a></li>
+				<li class="types"><a href="#"><img class="typeicon" src="">OTHER</a></li>
+		       </ul>
+		</div>
+	</div>
 	<hr />
 	{% for user in users %}
 	<a href="{{ user.pk }}">
 	<div class="row">
 		<div class="col-md-2 col-sm-2">
-			<img src="{% static 'img/' %}{{ user.img_url }}"/>
+			<img src="{{ user.img_url }}"/>
+		
 		</div>
 		<div class="col-md-10 col-sm-10">
 			<h4>{{ user.name }}</h4>

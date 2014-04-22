@@ -24,6 +24,28 @@ body {
   height: 1em;
   margin: 0 10px 0 0;
 }
+#user #filters {
+  background-color: #FFF;
+  margin: -40px 0 0 0;
+  padding: 5px 0 10px 5px;
+}
+#user .filters {
+  display: block;
+  float: left;
+  background-color: #FFF;
+}
+#user .types {
+  color: #FFF;
+  display: block;
+  float: left;
+}
+#user .typeicon {
+  height: 25px;
+  margin: 0 5px 0 10px;
+}
+#user .left {
+  float: left;
+}
 #user .copy {
   font-weight: 400;
 }
