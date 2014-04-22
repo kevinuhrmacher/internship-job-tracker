@@ -5773,6 +5773,8 @@ button.close {
   }
 }
 #base {
+  /* if logged in, but no preferences set */
+  /* footer */
   /* footer stuck to bottom of page */
 }
 #base h1,
@@ -5818,7 +5820,7 @@ button.close {
 #base .preferences {
   display: block;
   background-color: #413d3b;
-  padding: 0 20px 0 20px;
+  padding: 0 10px 0 10px;
   margin: 0 5px 0 5px;
 }
 #base .preferences:hover {
@@ -5835,15 +5837,24 @@ button.close {
   margin: 0 5px 0 0;
   opacity: .5;
 }
+#base a.blank {
+  color: #e8eef0;
+  text-transform: uppercase;
+  opacity: .5;
+}
+#base .favorites {
+  color: #e8eef0;
+  font-family: 'Source Sans Pro';
+  font-weight: 800;
+  font-size: 1em;
+  line-height: 45px;
+}
 #base .footer {
   background-color: #242726;
   line-height: 40px;
+  margin: 0 0 0 0;
   padding: 5px 0 0 0;
   width: 100%;
-  position: absolute;
-  bottom: 0;
-  /* Set the fixed height of the footer here */
-  height: 60px;
 }
 #base p {
   color: #e8eef0;
@@ -5855,16 +5866,6 @@ button.close {
 }
 #base .footerlogo {
   height: 40px;
-}
-#base .firstcharacter {
-  float: left;
-  color: #e8eef0;
-  font-size: 60px;
-  font-weight: 400;
-  line-height: 40px;
-  margin: 3px 0 0 0;
-  padding: 4px 8px 0 3px;
-  font-family: 'Source Sans Pro';
 }
 #base body {
   margin: 0;

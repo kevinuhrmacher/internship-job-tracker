@@ -13,6 +13,7 @@ class ProfileForm(ModelForm):
           'major',
           'img_url',
           'portfolio',
+          'linkedin',
           'twitter',
           'current_position',
           'current_city',
