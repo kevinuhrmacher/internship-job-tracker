@@ -58,10 +58,24 @@
 
 		     <!-- Here goes the user preferences  -->
 		      <ul class="nav navbar-nav">
-			<li class="preferences"><a href="/{{ user.typepref }}"><img class="typeicon-nav" src="../../static_media/img/coder-blue.png">DESIGNER{{ user.typepref }}</a></li>
-			<li class="preferences"><a href="/city/1">NORFOLK{{ user.citypref }}</a></li>
-			<li class="preferences"><a href="/organization/1">THE VIRGINIAN PILOT{{ user.organizationpref }}</a></li>
-		      </ul>
+
+      {% if request.user.is_authenticated %}
+      <li class="preferences"><a href="/{{ user.typepref }}"><img class="typeicon-nav" src="../../static_media/img/coder-blue.png">Skillset</a></li>
+			     {% if request.user.profile.current_city != None %}
+      <li class="preferences"><a href="/city/{{request.user.profile.current_city.id}}">{{ request.user.profile.current_city }}</a></li>
+			     {% else %}
+           <li class="preferences"><a href="/city/1">Your City is Blank</a></li>
+          {% endif %}
+          {% if request.user.profile.current_city != None %}
+      <li class="preferences"><a href="/organization/{{ request.user.profile.current_company.id }}">{{ request.user.profile.current_company }}</a></li>
+		      {% else %}
+          <li class="preferences"><a href="/organization/1">Your Company is Blank</a></li>
+          {% endif %}
+      {% else %}
+
+      {% endif %}
+
+      </ul>
 
 		<!-- If not logged in, they'll be prompted to do so.
 
@@ -91,6 +105,7 @@
       {% if request.user.is_authenticated %}
 
       <li><a href="{% url 'interactive_app_user' request.user.id %}"><span class=""><img style="height: 20px;"src="{{ request.user.profile.profile_image_url }}"/>&nbsp{{request.user.username|upper}}</span></a></li>
+      <li><a href="{% url 'profile_settings'%}">Settings</a></li>
       <li><a href="/accounts/logout/">Logout</a></li>
     </form>
     {%else%}
@@ -120,15 +135,15 @@
 		<div class="container">
       <div class="row">
 
-    		<div class="col-sm-3">
+    		<div class="col-sm-3 col-xs-5">
     			<h4>Ramses Rolodex</h4>
     		</div>
 
-    		<div class="col-sm-3">
+    		<div class="col-sm-3 col-xs-5">
     			<a><p>About</p></a>
     		</div>
 
-    		<div class="col-sm-offset-3 col-sm-3">
+    		<div class="col-sm-offset-3 col-sm-3 hidden-phone">
     			<a href="http://www.jomc.unc.edu"><img src="../../static_media/img/jschool-logo.png" class="footerlogo pull-right"></a>
     		</div>
     </div>

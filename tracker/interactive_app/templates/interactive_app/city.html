@@ -9,49 +9,47 @@
         <h1>Welcome to {{ city.name }}</h1>
         <hr />
         <div class="col-md-6">
-            <div class="col-md-12">
-                <h3>Tar Heels working here:</h3>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th><h4>Name</h4></th>
-                            <th><h4>Organization</h4></th>
-                            <th><h4>Position</h4></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for person in current_people %}
-                            <tr><td><p><a href="{% url 'interactive_app_user' person.id %}">{{ person.name }}</a></p></td>
-                            
-                            <td><p>{{ person.current_company }}</p></td>
-                            
-                            <td><p>{{ person.current_position }}</p></td></tr>
+            <h3>Tar Heels working here:</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th><h4>Name</h4></th>
+                        <th><h4>Organization</h4></th>
+                        <th><h4>Position</h4></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for person in current_people %}
+                        <tr><td><p><a href="{% url 'interactive_app_user' person.id %}">{{ person.name }}</a></p></td>
+                        
+                        <td><p>{{ person.current_company }}</p></td>
+                        
+                        <td><p>{{ person.current_position }}</p></td></tr>
+                    {% endfor %}
+                    
+                </tbody>
+            </table>
+            <h3>Organizations in {{ city.name }}:</h3>
+            <hr />
+                <div class="row">
+                    <div class="col-md-6">
+                        {% for org in local_orgs %}
+                        <p><a href="{% url 'interactive_app_organization' org.id %}">{{ org.name }}</a></p>
                         {% endfor %}
-                        
-                    </tbody>
-                </table>
-                <h3>Organizations in {{ city.name }}:</h3>
+                    </div>  
+                </div>
                 <hr />
-                    <div class="row">
-                        <div class="col-md-12">
-                            {% for org in local_orgs %}
-                            <p><a href="{% url 'interactive_app_organization' org.id %}">{{ org.name }}</a></p>
-                            {% endfor %}
-                        </div>
-                        
-                    </div>
-                    <hr />
-            </div>
         </div>
         <div class="col-md-6">
             <img class="city_map" src="http://api.tiles.mapbox.com/v3/afortune906.hnidfk42/{{ city.longitude }},{{ city.lat }},11/500x300.jpg"/>
         </div>
             
         <div class="col-md-6">   
-            <a href="{% url 'interactive_app_city_list' %}">View all cities</a>
+            <a href="{% url 'interactive_app_city_list' %}">View all cities &raquo;</a>
         </div>
 
     </div>
+
 </div>
 </div>
    
