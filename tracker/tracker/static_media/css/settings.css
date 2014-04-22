@@ -5772,122 +5772,98 @@ button.close {
     display: none !important;
   }
 }
-#base {
-  /* if logged in, but no preferences set */
-  /* footer */
-  /* footer stuck to bottom of page */
+#settings {
+  background-size: 100%;
+  background-image: url(../../static_media/img/rolodex-signup2.png);
+  background-repeat: no-repeat;
+  padding: 0 0 50px 50px;
 }
-#base h1,
-#base h2,
-#base h3,
-#base h4,
-#base h5,
-#base h6,
-#base p,
-#base a,
-#base body {
+#settings h1,
+#settings h2,
+#settings h3,
+#settings h4,
+#settings h5,
+#settings h6,
+#settings p,
+#settings body {
   font-family: 'Source Sans Pro';
   color: #242726;
 }
-#base .nav-logo {
-  color: #f8f3e8;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-#base a,
-#base .link {
-  color: #9fc5ff;
-}
-#base a:hover {
-  color: #6ca6ff;
-  text-decoration: none;
-}
-#base .loginmodal {
-  padding: 5px 10px 5px 10px;
-  text-decoration: none;
-  color: #242726;
-}
-#base .loggedout-prompt {
-  color: #f8f3e8;
-  display: block;
-  margin: 12px 0 0 20px;
-  font-size: 1em;
-}
-#base .navbar {
-  background-color: #4e4947;
-  padding: 0 0 0 0;
-}
-#base .preferences {
-  display: block;
-  background-color: #413d3b;
-  padding: 0 10px 0 10px;
-  margin: 0 5px 0 5px;
-}
-#base .preferences:hover {
-  background-color: #191716;
-}
-#base ul.dropdown-menu.loginmodal::before {
-  margin: 0 0 0 205px;
-}
-#base ul.dropdown-menu.loginmodal::after {
-  margin: 0 0 0 205px;
-}
-#base .typeicon-nav {
-  height: 20px;
-  margin: 0 5px 0 0;
-  opacity: .5;
-}
-#base a.blank {
-  color: #e8eef0;
-  text-transform: uppercase;
-  opacity: .5;
-}
-#base .favorites {
-  color: #e8eef0;
-  font-family: 'Source Sans Pro';
+#settings h1,
+#settings h2,
+#settings h3,
+#settings h4 {
   font-weight: 800;
-  font-size: 1em;
-  line-height: 45px;
 }
-#base .footer {
-  background-color: #242726;
-  line-height: 40px;
-  margin: 0 0 0 0;
-  padding: 5px 0 0 0;
+#settings a:hover {
+  text-decoration: none;
+}
+#settings label {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+#settings textarea,
+#settings input[type="text"],
+#settings input[type="password"],
+#settings input[type="datetime"],
+#settings input[type="datetime-local"],
+#settings input[type="date"],
+#settings input[type="month"],
+#settings input[type="time"],
+#settings input[type="week"],
+#settings input[type="number"],
+#settings input[type="email"],
+#settings input[type="url"],
+#settings input[type="search"],
+#settings input[type="tel"],
+#settings input[type="color"],
+#settings .uneditable-input {
+  height: 2em;
+  float: right;
   width: 100%;
+  margin: 0 0 15px 0;
 }
-#base p {
-  color: #e8eef0;
-  font-weight: 100;
+#settings textarea#id_bio {
+  height: 10em;
 }
-#base h4 {
-  color: #e8eef0;
-  font-weight: 700;
+#settings textarea#id_img_url {
+  height: 4em;
 }
-#base .footerlogo {
-  height: 40px;
-}
-#base body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-#base #container {
-  min-height: 100%;
-  position: relative;
-}
-#base #body {
-  padding: 10px;
-  padding-bottom: 60px;
-  /* Height of the footer */
-}
-#base #footer {
-  position: absolute;
-  bottom: 0;
+#settings select#id_skillset {
+  background-color: none;
+  background-image: url(../../static_media/img/caret.png);
+  background-repeat: no-repeat;
+  background-position: right;
   width: 100%;
-  height: 50px;
-  /* Height of the footer */
+  -webkit-appearance: none;
 }
-#base #404page {
-  background-color: #63f;
+#settings select#id_current_city {
+  background-color: none;
+  background-image: url(../../static_media/img/caret.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 100%;
+  -webkit-appearance: none;
+}
+#settings select#id_current_company {
+  background-color: none;
+  background-image: url(../../static_media/img/caret.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 100%;
+  -webkit-appearance: none;
+}
+#settings .signuppng {
+  height: 8em;
+  overflow: hidden;
+}
+#settings button.btn {
+  background-color: #4b5485;
+  color: #f8f3e8;
+  text-decoration: none;
+}
+@media (max-width: 1024px) {
+  #settings {
+    background-image: none;
+  }
 }

@@ -5823,6 +5823,13 @@ button.close {
   color: #f8f3e8;
   text-decoration: none;
 }
+#signup ul.errorlist {
+  background-color: #f2dede;
+  border: 1px #bd362f solid;
+  list-style-type: none;
+  margin: 10px 0 10px 0px;
+  padding: 5px 10px 5px 10px;
+}
 @media (max-width: 1024px) {
   #signup {
     background-image: none;
