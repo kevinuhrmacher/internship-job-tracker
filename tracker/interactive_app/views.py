@@ -10,6 +10,9 @@ def home(request):
     city_list = City.objects.all()
     return render(request, "interactive_app/home.html", {'users': user_list, 'organizations': organization_list, 'cities': city_list})
 
+def about(request):
+    return render(request, 'interactive_app/about.html')
+    
 def user(request, pk):
 	user = get_object_or_404(UserProfile, id=pk)
 	return render(request, "interactive_app/user.html", {'user': user})
