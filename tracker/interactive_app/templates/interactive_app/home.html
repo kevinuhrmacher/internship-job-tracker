@@ -29,16 +29,9 @@
 	<div id="map"></div>
 </div>
 <script>
+{% for user in users %}
+alert("lat: " + "{{user.current_company.lat}}" + "long: " + "{{user.current_company.longitude}}");
 
-// var jqxhr = $.getJSON( "cities.json", function() {
-//   console.log( "success" );
-// })
-
-// jqxhr.complete(function() {
-//   console.log( "second complete" );
-// });
-
-// var geojson = {"geometry": {"type": "Point", "coordinates": [{{ fields.lat }}, {{ fields.longitude }}]}, "type": "Feature", "properties": {}}
-
+{% endfor %}
 </script>
 {% endblock %}
