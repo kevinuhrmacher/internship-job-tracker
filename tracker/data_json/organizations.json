@@ -83,5 +83,107 @@
 			"lat": "25.806992",
 			"longitude": "-80.344217"
 		}
+	},
+        	{
+		"pk": 5,
+		"model":"interactive_app.Organization",
+		"fields":{
+			"name": "The New York Times",
+			"url": "http://www.nytimes.com/",
+			"bio": "The New York Times (NYT) is an American daily newspaper, founded and continually published in New York City since September 18,1851. It has won 112 Pulitzer Prizes, more than any other news organization. Its website is one of America's most popular news sites, and the most popular among all the nation's newspapers, receiving more than 30 million unique visitors per month as reported in January 2011. The paper's print version remains the largest local metropolitan newspaper in the United States and third-largest newspaper overall, behind The Wall Street Journal and USA Today. Nicknamed 'The Gray Lady', The New York Times is long regarded within the industry as a national 'newspaper of record'. It is owned by The New York Times Company. Arthur Ochs Sulzberger Jr., whose family has controlled the paper since 1896, is both the paper's publisher and the company's chairman. Its international version, formerly the International Herald Tribune, is now called the International New York Times. The paper's motto, 'All the News That's Fit to Print', appears in the upper left-hand corner of the front page. Its website has adapted it to 'All the News That's Fit to Click'. It is organized into sections: News, Opinions, Business, Arts, Science, Sports, Style, Home, and Features. The New York Times stayed with the eight-column format for several years after most papers switched to six, and was one of the last newspapers to adopt color photography.",
+                        "contact": "corporate@nytimes.com",
+                        "city": 5,
+                        "opening": "http://www.nytimes.com/pages/jobs/",
+                        "twitter": "https://twitter.com/nytimes",
+                        "img_url": "newyorktimes.jpg",
+			"address": "620 Eighth Avenue, New York, New York 10018",
+			"lat": "40.756225",
+			"longitude": "-73.989859"
+		}
+	},
+        	{
+		"pk": 6,
+		"model":"interactive_app.Organization",
+		"fields":{
+			"name": "The Wall Street Journal",
+			"url": "http://online.wsj.com/home-page",
+			"bio": "The Wall Street Journal is an American English-language international daily newspaper with a special emphasis on business and economic news. It is published six days a week in New York City by Dow Jones and Company, a division of News Corp, along with the Asian and European editions of the Journal. The Journal is the largest newspaper in the United States, by circulation. According to Alliance for Audited Media, it has a circulation of about 2.4 million copies (including nearly 900,000 digital subscriptions), as of March 2013, compared with USA Today's 1.7 million. Its main rival in the business newspaper sector is the London-based Financial Times, which also publishes several international editions. The Journal primarily covers American economic and international business topics, and financial news and issues. Its name derives from Wall Street, located in New York City, which is the heart of the financial district; it has been printed continuously since its inception on July 8, 1889, by Charles Dow, Edward Jones, and Charles Bergstresser. The newspaper version has won the Pulitzer Prize 34 times, includying 2007 prizes for its reporting on backdated stock options and the adverse effects of China's booming economy. In 2011, The Wall Street Journal was ranked No. 1 in BtoB's Media Power 50 for the 12th consecutive year. The current editor-in-chief is Gerard Baker and the current opinion editor is Paul Gigot.",
+                        "contact": "paula.keve@dowjones.com",
+                        "city": 5,
+                        "opening": "http://online.wsj.com/public/page/news-career-jobs.html",
+                        "twitter": "https://twitter.com/WSJ",
+                        "img_url": "wallstreetjournal.jpg",
+			"address": "1211 Avenue of the Americas, New York, New York 10036",
+			"lat": "40.758706",
+			"longitude": "-73.982413"
+		}
+	},
+        	{
+		"pk": 7,
+		"model":"interactive_app.Organization",
+		"fields":{
+			"name": "The Chicago Tribune",
+			"url": "http://www.chicagotribune.com/",
+			"bio": "The Chicago Tribune is a major daily newspaper based in Chicago, Illinois, and the flagship publication of the Tribune Company. Founded in 1847, and formerly self-styled as the 'World's Greatest Newspaper' (for which WGN radio and television are named), it remains the most-read daily newspaper of the Chicago Metropolitan area and the Great Lakes region and is currently the eighth-largest newspaper in the United States by circulation (and became the second largest under Tribune's ownership after the Chicago Tribune's parent company purchased the Los Angeles Times. Traditionally published as a broadsheet, on January 13, 2009, the Tribune announced it would continue publishing as a broadsheet for home delivery, but would publish in tabloid format for newsstand, news box and commuter station sales. The move, however, proved to be unpopular with readers and in August 2011, the Tribune discontinued the tabloid edition, returning to its traditional broadsheet edition through all distribution channels. The Tribune's masthead is notable for displaying the American flag, in reference to the paper's motto, 'An American Paper for Americans,' which is no longer displayed on the masthead, where it was below the flag. On April 2, 2007, the Tribune Company announced a buy-out plan led by Chicago real estate magnate Sam Zell worth $8.2 billion, associated with a stock buyback at $34 per share, and an Employee Stock Ownsership Plan. The deal closed on December 20, 2007, with Zell as the company's new chairman. As part of the deal, the company sold the Chicago Cubs and its properties including Wrigley Field and a stake in Comcast SportsNet Chicago. The current editor-in-chief is Gerould W. Kern.",
+                        "contact": "evarvatos@tribune.com",
+                        "city": 6,
+                        "opening": "http://www.chicagotribune.com/about/tribunecareers/",
+                        "twitter": "https://twitter.com/chicagotribune",
+                        "img_url": "chicagotribune.jpg",
+			"address": "435 North Michigan Avenue, Chicago, Illinois 60611",
+			"lat": "41.890345",
+			"longitude": "-87.623333"
+		}
+	},
+        	{
+		"pk": 8,
+		"model":"interactive_app.Organization",
+		"fields":{
+			"name": "NPR",
+			"url": "http://www.npr.org/",
+			"bio": "NPR, formerly National Public Radio, is a privately and publicly funded non-profit membership media organization that serves as a national syndicator to a network of 900 public radio stations in the United States. NPR produces and distributes news and cultural programming. Individual public radio stations are not required to broadcast all NPR programs that are produced. Most public radio stations broadcast a mixture of NPR programs, content from rival providers American Public Media, Public Radio International and Public Radio Exchange, and locally produced programs. NPR's flagships are two drive time news broadcasts, Morning Edition and the afternoon All Things Considered; both are carried by most NPR Member Stations, and are two of the most popular radio programs in the country. NPR manages the Public Radio Satellite System, which distributes NPR programs and other programming from independent producers and networks such as American Public Media and Public Radio International. Its content is also available on-demand via the web, mobile, and podcasts.",
+                        "contact": "jhoran@npr.org",
+                        "city": 0,
+                        "opening": "https://careers-npr.icims.com/jobs/intro?hashed=0",
+                        "twitter": "https://twitter.com/NPR",
+                        "img_url": "npr.jpg",
+			"address": "1111 North Capitol Street NE, Washington, D.C. 20002",
+			"lat": "38.904280",
+			"longitude": "-77.008718"
+		}
+	},
+        	{
+		"pk": 9,
+		"model":"interactive_app.Organization",
+		"fields":{
+			"name": "The Boston Globe",
+			"url": "http://www.bostonglobe.com/",
+			"bio": "The Boston Globe is an American daily newspaper based in Boston, Massachusetts. Founded in 1872 by Charles H. Taylor, it was privately held until 1973, when it went public as Affiliated Publications. The company was acquired in 1993 by The New York Times Company; two years later Boston.com was established as the newspaper's online edition. In 2011, a BostonGlobe.com subscription site was launched. In 2013, the newspaper and websites were purchased by John W. Henry, a businessman whose other holdings include the Boston Red Sox and Liverpool FC. The Boston Globe has been awarded 23 Pulitzer Prizes since 1966, and its chief print rival is the Boston Herald. Over the years the Globe has evolved from a newspaper into a multi-media source of news and information. The Globe moved to its current home in the Dorchester section of Boston in 1958 after 87 years on Washington Street's 'Newspaper Row' - so named because the street was the address of many of Boston's newspapers.",
+                        "contact": "hr@globe.com",
+                        "city": 7,
+                        "opening": "http://services.bostonglobe.com/aboutus/career/default.aspx?id=7098",
+                        "twitter": "https://twitter.com/BostonGlobe",
+                        "img_url": "bostonglobe.jpg",
+			"address": "135 Morrissey Boulevard, Boston, Massachusetts 02125",
+			"lat": "42.315877",
+			"longitude": "-71.048466"
+		}
+	},
+        	{
+		"pk": 10,
+		"model":"interactive_app.Organization",
+		"fields":{
+			"name": "The Los Angeles Times",
+			"url": "http://www.latimes.com/",
+			"bio": "The Los Angeles Times is a daily newspaper published in Los Angeles, California since 1881. It was the largest metropolitan newspaper in circulation in the United States in 2008 and the fourth most widely distributed newspaper in the country. In 2000, the Tribune Company, parent company of the Chicago Tribune and the area's KTLA, purchased the Los Angeles Times. The LA Times has a daily readership of 1.5 million and 2.6 million on Sunday, more than 22 million unique latimes.com visitors monthly and a combined print and online local weekly audience of 4 million. Through 2014, the Times had won 41 Pulitzer Prizes, including four in editorial cartooning, and one each in spot news reporting for the 1965 Watts Riots and the 1992 Los Angeles riots. Current editor-in-chief is Davan Maharaj.",
+                        "contact": "readers.representative@latimes.com",
+                        "city": 8,
+                        "opening": "http://www.careerbuilder.com/Jobs/Company/C35J3799H32J0FZL9X/Los-Angeles-Times-Media-Group-Jobs/",
+                        "twitter": "https://twitter.com/latimes",
+                        "img_url": "losangelestimes.jpg",
+			"address": "101 West 1st Street, Los Angeles, California 90012",
+			"lat": "34.052242",
+			"longitude": "-118.243348"
+		}
 	}
 ]
