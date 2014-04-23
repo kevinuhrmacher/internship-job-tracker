@@ -40,8 +40,8 @@ body {
   color: #4e4946;
 }
 #user .img-box {
-  height: 150px;
-  width: 150px;
+  max-height: 150px;
+  max-width: 150px;
   margin-left: auto;
   margin-right: auto;
   border: 1px white solid;
