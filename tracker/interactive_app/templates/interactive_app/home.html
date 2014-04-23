@@ -6,36 +6,15 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 </div><!--container-->
 <div id="home">
-	<div id = "filters">
-		<div class="container">
-			<div class="row">
-				    <div class="col-md-7">
-				      <ul>
-						<li class="types">I am looking for an internships in:&nbsp</li>
-						<li class="types active"><a href="#" class="active"><img src=""> VIEW ALL</a></li>
-						<li class="types"><a href="#"><img class="typeicon" src="../static_media/img/coder-blue.png"></a></li>
-						<li class="types"><a href="#"><img class="typeicon" src="../static_media/img/design-blue.png"></a></li>
-						<li class="types"><a href="#"><img class="typeicon" src="../static_media/img/photo-blue.png"></a></li>
-						<li class="types"><a href="#"><img class="typeicon" src="../static_media/img/reporting-blue.png"></a></li>
-						<li class="types"><a href="#"><img class="typeicon" src="">other</a></li>
-				      </ul>
-				    </div><!--col-->
-			    
-				    <div class="col-md-3 types cityfilt">NATIONAL <b class="caret"></b></div>
-
-				    <div class="col-md-2 maptoggle"><a href="/" class="maptoggle active">MAP </a> | <a href="/user" class="maptoggle">LIST</a></div>
-
-				</div>
-			</div><!--container-->
-		</div><!--row-->
 	<div id="map"></div>
 </div>
 
 <script type="text/javascript">
 
-
+//empty array to push new geoJson objects into
 var geoJson = []
 
+//geojson builder
 	{% for user in users %}
 	var object = {
 		type: 'Feature',
@@ -46,15 +25,18 @@ var geoJson = []
 		properties: {
 			title: "{{ user.user }}",
 			url: "/user/{{user.pk}}",
+			description: '{{ user.current_company }}',
 			'marker-size':'small',
-			'marker-color':'#f0a'
+			'marker-color':'#4B5485'
 	}
 };
+//yay we're making a dynamic geojson file!!
 	geoJson.push(object);
 {% endfor %}
 
-var map = L.mapbox.map('map', 'examples.map-9ijuk24y');
-
+//making a map
+var map = L.mapbox.map('map', 'examples.map-9ijuk24y').setView([39.8282, -98.5795], 4);
+//adding geojson array to the map
 var myLayer = L.mapbox.featureLayer(geoJson).addTo(map);
 
 
@@ -80,11 +62,26 @@ myLayer.on('ready', function() {
     map.fitBounds(featureLayer.getBounds());
 });
 
+L.mapbox.featureLayer('examples.map-9ijuk24y').on('ready', function(e) {
+    // The clusterGroup gets each marker in the group added to it
+    // once loaded, and then is added to the map
+    var clusterGroup = new L.MarkerClusterGroup();
+    e.target.eachLayer(function(layer) {
+        clusterGroup.addLayer(layer);
+    });
+    map.addLayer(clusterGroup);
+});
+
+myLayer.on('mouseover', function(e) {
+    e.layer.openPopup();
+});
+myLayer.on('mouseout', function(e) {
+    e.layer.closePopup();
+});
 // Add features to the map
 // myLayer.setGeoJSON(geoJson);
 map.scrollWheelZoom.disable();
 
-map.setView([45.908, -78.525], 4);
 
 </script>
 	
