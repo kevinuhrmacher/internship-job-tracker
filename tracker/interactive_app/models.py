@@ -5,6 +5,7 @@ from allauth.socialaccount.models import SocialAccount
 
 import hashlib
 
+
 class City(models.Model):
     name = models.TextField(null=True)
     state = models.TextField(null=True)
@@ -47,17 +48,19 @@ class UserProfile(models.Model):
       ('Coder', 'Programmer'),
       ('Photo', 'Photographer'),
       ('Reporting', 'Reporter'),
+      ('Other', 'Other'),
     )
 
     user = models.OneToOneField(User, related_name='profile')
     skillset = models.CharField(max_length=10,choices=SKILLSET_CHOICES)
     email = models.TextField(null=True, blank=True)
     graduation_year = models.TextField(null=True, blank=True)
-    bio = models.TextField(null=True, blank=True)
+    bio = models.TextField(null=True, blank=True, verbose_name="Biography & advice")
     major = models.TextField(null=True, blank=True)
-    img_url = models.TextField(null=True, default = 'http://www.dotnetcodesg.com/Register/UserImage/Default.png')
-    portfolio = models.TextField(null=True, blank=True)
-    twitter = models.TextField(null=True, blank=True)
+    img_url = models.TextField(null=True, default = 'http://www.dotnetcodesg.com/Register/UserImage/Default.png', verbose_name="Profile image URL")
+    portfolio = models.TextField(null=True, blank=True, verbose_name="Portfolio Link")
+    linkedin = models.TextField(null=True, blank=True, verbose_name="LinkedIn Profile")
+    twitter = models.TextField(null=True, blank=True, verbose_name="Twitter Handle")
     current_position = models.TextField(null=True, blank=True)
     current_city = models.ForeignKey(City, null=True, blank=True)
     current_company = models.ForeignKey(Organization, null=True, blank=True)
@@ -78,8 +81,7 @@ class UserProfile(models.Model):
         if len(fb_uid):
             return "http://graph.facebook.com/{}/picture?width=40&height=40".format(fb_uid[0].uid)
 
-        return "http://www.dotnetcodesg.com/Register/UserImage/Default.png".format(
-            hashlib.md5(self.user.email).hexdigest())
+        return self.user.profile.img_url
 
     def account_verified(self):
         """
@@ -94,6 +96,22 @@ class UserProfile(models.Model):
 
 
 User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+
+class JobPosting(models.Model):
+    JOBTYPE_CHOICES = (
+    ("Internship","Internship"),
+    ("Job","Job")
+    )
+
+    title = models.CharField(max_length = 100, null=True)
+    jobType = models.CharField(max_length=10,choices=JOBTYPE_CHOICES)
+    link = models.CharField(max_length = 50, null=True, blank=True)
+    desc = models.TextField(null=True, blank=True)
+    timeStamp = models.DateTimeField(auto_now_add=True)
+    contact = models.CharField(max_length = 50, null=True, blank=True)
+    timeFrame = models.DateTimeField(null=True, blank=True)
+    organization = models.ForeignKey(Organization, null=True, blank=True)
+
 
 class Position(models.Model):
     department = models.TextField(null=True)
