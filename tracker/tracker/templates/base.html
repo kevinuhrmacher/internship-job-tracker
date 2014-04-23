@@ -19,6 +19,7 @@
     <link href="/static_media/css/home.css" rel ="stylesheet">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <link href="/static_media/css/signup.css" rel ="stylesheet">
+    <link href="/static_media/css/settings.css" rel ="stylesheet">
 
     <title>{% block title %}Internship-Job Tracker{% endblock %}</title>
 </head>
@@ -48,30 +49,30 @@
 		    <div class="collapse navbar-collapse">
 
 		      <a href="{% url 'interactive_app_home'%}"><span class="navbar-brand nav-logo">Ramses Rolodex</span></a>
+	
 
-		      <ul class="nav navbar-nav">
-		      </ul>
 
 		     <!-- Here goes the user preferences  -->
 		      <ul class="nav navbar-nav">
-
       {% if request.user.is_authenticated %}
+      				<li class="favorites"><i class="fa fa-star-o"></i> FAVORITES</li>
       <li class="preferences"><a href="/{{ user.typepref }}"><img class="typeicon-nav" src="../../static_media/img/coder-blue.png">Skillset</a></li>
 			     {% if request.user.profile.current_city != None %}
       <li class="preferences"><a href="/city/{{request.user.profile.current_city.id}}">{{ request.user.profile.current_city }}</a></li>
 			     {% else %}
-           <li class="preferences"><a href="/city/1">Your City is Blank</a></li>
+           <li class="preferences blank"><a href="/city/1" class="blank">City</a></li>
           {% endif %}
           {% if request.user.profile.current_city != None %}
       <li class="preferences"><a href="/organization/{{ request.user.profile.current_company.id }}">{{ request.user.profile.current_company }}</a></li>
 		      {% else %}
-          <li class="preferences"><a href="/organization/1">Your Company is Blank</a></li>
+          <li class="preferences"><a href="/organization/1" class="blank">Company</a></li>
           {% endif %}
       {% else %}
 
       {% endif %}
 
       </ul>
+		      
 
 		<!-- If not logged in, they'll be prompted to do so.
 
@@ -101,7 +102,7 @@
       {% if request.user.is_authenticated %}
 
       <li><a href="{% url 'interactive_app_user' request.user.id %}"><span class=""><img style="height: 20px;"src="{{ request.user.profile.profile_image_url }}"/>&nbsp{{request.user.username|upper}}</span></a></li>
-      <li><a href="{% url 'profile_settings'%}">Settings</a></li>
+      <li><a href="{% url 'profile_settings'%}"><i class="fa fa-cog fa-lg"></i></a></li>
       <li><a href="/accounts/logout/">Logout</a></li>
     </form>
     {%else%}

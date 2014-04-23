@@ -16,4 +16,5 @@ urlpatterns = patterns('',
     url(r'^city/(?P<pk>\d+)$', views.city, name='interactive_app_city'),
     url(r'^job/post$', views.PostJob, name='job_posting'),
     # url(r'^about/',views.about, name='interactive_app_about')
+    url(r'^about/', views.about, name='interactive_app_about')
     )
