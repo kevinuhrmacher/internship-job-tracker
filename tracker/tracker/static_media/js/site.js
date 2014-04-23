@@ -111,7 +111,7 @@ myLayer.on('ready', function() {
 });
 
 // Add features to the map
-myLayer.setGeoJSON(geoJson);
+// myLayer.setGeoJSON(geoJson);
 map.scrollWheelZoom.disable();
 
 map.setView([45.908, -78.525], 4);
