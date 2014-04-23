@@ -5,7 +5,13 @@ body{
 
 #user{
 	@font: 'Source Sans Pro', sans-serif;
-
+	@cream: #F8F3E8;
+	@brown: #4E4947;
+	@light-blue: #9FC5FF;
+	@dark-blue: #4B5485;
+	@gray: #242726;
+	@light-gray: #E8EEF0;
+	
 	@header-weight: 600;
 	@copy-weight: 400;
 	@bold-weight: 700;
@@ -47,21 +53,45 @@ body{
 	    background-color: #FFF;
 	}
 	
-	hr {
-		margin: 10px 0 10px 0;
-	}
-	
 	.types {
 	    color: #FFF;
 	    display: block;
 	    float: left;
+	    padding: 5px 10px 5px 5px;
+	    margin: 5px 5px 5px 5px;
+	}
+	.types:hover{
+	    background-color: @light-gray;
+	    border-radius: 2px;
 	}
 	
 	.typeicon {
 	    height:25px;
 	    margin: 0 5px 0 10px;
 	}
-	.typeicon:hover {
+	
+	/* css for list page navigation */
+    
+	a.listlink {
+	    border-radius: 3px;
+	    display: block;
+	    text-align: center;
+	    margin: 30px 0 0 0;
+		:hover {
+		    background-color: @light-gray;
+		    text-decoration: none;
+		}
+	}
+	a.listlink.active {
+	background-color: @light-blue;
+		:hover {
+		text-decoration: none;	
+		}
+	}
+	
+	
+	p.nounderline:hover {	
+	    text-decoration: none;
 	}
 	
 	.left {
@@ -71,6 +101,11 @@ body{
 	.userlistitem {
 		list-style-type: none;
 		height: 2em;
+	}
+
+	
+	.itemheight {
+		line-height: 30px;
 	}
     
 	.copy{
