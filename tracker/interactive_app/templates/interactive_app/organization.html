@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row">
         <h2>{{ organization.name }}</h2>
-        <hr /> 
+        <hr />
         <div class="col-md-8">
             <h3>Description:</h3>
             <p>{{ organization.bio }}</p>
@@ -55,24 +55,24 @@
                 {% endfor %}
         </div>
     </div>
-    
+
     <div id="city">
     <div class="container">
         <div class="row">
         <div class="col-md-12">
             <h3>Tar Heels working here</h3>
-                
+
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#current" data-toggle="tab">Current</a></li>
                     <li><a href="#previous" data-toggle="tab">Previous</a></li>
                 </ul>
-                
+
                 <div class="tab-content">
                     <div class="tab-pane active" id="current">
-                        {% for person in current_people %}
+                        {% for person in featuredPeople %}
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
-                                    <a href="{% url 'interactive_app_user' person.id%}"><img src="{% static 'img/' %}{{ person.img_url }}" class="img-thumbnail"></a>   
+                                    <a href="{% url 'interactive_app_user' person.id%}"><img src="{% static 'img/' %}{{ person.img_url }}" class="img-thumbnail"></a>
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-12">
                                 <h4>{{ person.name }}</h4>
@@ -82,22 +82,22 @@
                             <div class="col-md-2 col-sm-2 col-xs-12 ">
                                 <a href="{% url 'interactive_app_user' person.id%}">View Profile &raquo;</a>
                             </div>
-                        
+
                         </div>
                         <hr />
                         {% endfor %}
                     </div>
-                    
+
                     <div class="tab-pane" id="previous">
                         <p>No information for previous people yet.</p>
                     </div>
-                    
+
                 </div>
         </div>
         </div>
     </div>
     </div>
-</div>   
+</div>
 </div>
 
 

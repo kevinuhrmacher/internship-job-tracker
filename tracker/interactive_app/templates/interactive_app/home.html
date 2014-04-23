@@ -31,29 +31,62 @@
 	<div id="map"></div>
 </div>
 
-{% endblock %}
-
-{% block extra-js %}
-<script>
+<script type="text/javascript">
 
 
-$.ajax({
-	url: '../../static_media/js/cities.json',
-	data: data,
-	dataType: 'jsonp'
-	success: function(data){
-		$each(data, function(k,v){
-			var d = v.content;
-			if(typeof d.lat !== 'undefined'){
-				var marker = new L.marker([d.lat, d.longitude]
-				});
-			marker.addTo(map)
-		})
+var geoJson = []
+
+	{% for user in users %}
+	var object = {
+		type: 'Feature',
+		geometry: {
+			type:'Point',
+			coordinates: [{{user.current_company.longitude}}, {{user.current_company.lat}}]
+		},
+		properties: {
+			title: "{{ user.user }}",
+			url: "/user/{{user.pk}}",
+			'marker-size':'small',
+			'marker-color':'#f0a'
 	}
+};
+	geoJson.push(object);
+{% endfor %}
+
+var map = L.mapbox.map('map', 'examples.map-9ijuk24y');
+
+var myLayer = L.mapbox.featureLayer(geoJson).addTo(map);
+
+
+myLayer.on('layeradd', function(e) {
+    var marker = e.layer,
+        feature = marker.feature;
+
+    // Create custom popup content
+    var popupContent =  '<a target="_blank" class="popup" href="' + feature.properties.url + '">' +
+                        '   <h2>' + feature.properties.title + '</h2>' +
+                        '</a>';
+
+    // http://leafletjs.com/reference.html#popup
+    marker.bindPopup(popupContent,{
+        closeButton: false,
+        minWidth: 320
+    });
 });
 
+myLayer.on('ready', function() {
+    // featureLayer.getBounds() returns the corners of the furthest-out markers,
+    // and map.fitBounds() makes sure that the map contains these.
+    map.fitBounds(featureLayer.getBounds());
+});
 
+// Add features to the map
+// myLayer.setGeoJSON(geoJson);
+map.scrollWheelZoom.disable();
+
+map.setView([45.908, -78.525], 4);
 
 </script>
+	
 {% endblock %}
 
