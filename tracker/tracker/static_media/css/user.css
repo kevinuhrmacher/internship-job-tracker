@@ -2,6 +2,7 @@ body {
   background-color: #d5d6d8;
 }
 #user {
+  padding: 0 0 15px 0;
   /* css for list page navigation */
   /*- FILTER OPTIONS -*/
   /*- -*/
@@ -55,9 +56,6 @@ body {
 #user .typeicon {
   height: 25px;
   margin: 0 5px 0 10px;
-}
-#user .bodyspace {
-  margin: 0 0 15px 0;
 }
 #user a.listlink {
   border-radius: 3px;

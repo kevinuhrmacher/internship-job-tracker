@@ -22,11 +22,10 @@
 	<div id="user">
 	    <ul>
 	    {% for organization in organizations %}
-            <a href="{{ organization.pk }}">
 	    <li class="item userlistitem">
 			    <div class="row">
 				    <div class="col-sm-6 col-xs-12">
-					    <a href="{{ orgnization.pk }}"><h4>{{ organization.name|upper }}</h4></a>
+					    <a href="{{ organization.id }}"><h4>{{ organization.name|upper }}</h4></a>
 				    </div>
 				    
 				    <div class="col-sm-3 hidden-phone">
@@ -39,7 +38,6 @@
 				    
 			    </div>
 			    </li>
-	    </a>
 	    {%endfor%}
 	    </ul>
 	</div>
