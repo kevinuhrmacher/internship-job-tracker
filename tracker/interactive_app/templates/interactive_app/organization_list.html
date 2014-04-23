@@ -5,7 +5,7 @@
     <div class="container">
 	<div id="user" class="row">
 		<div class="col-md-6">
-			<h1><i class="fa fa-list"></i> SEARCH THE DATABASE</h2>
+			<h1 class="notbold"><i class="fa fa-list"></i> SEARCH THE DATABASE</h2>
 		</div>
 		<div class="col-md-2">
 			<a href="/user" class="listlink"><h3>USERS</h3></a>
@@ -17,27 +17,42 @@
 			<a href="#" class="listlink active"><h3>COMPANIES</h3></a>
 		</div>
 	</div>
-	<hr />
-            {% for organization in organizations %}
+	
+	
+	<div id="user">
+	    <ul>
+	    {% for organization in organizations %}
             <a href="{{ organization.pk }}">
-            <div class="row">
-                    <div class="col-md-12">
-                            <h4>{{ user.name }}</h4>
-                            <p><strong>{{ organization.name }}</strong></p>
-                    </div>
-            </div>
-            </a>
-            <hr />
-            {%endfor%}
+	    <li class="item userlistitem">
+			    <div class="row">
+				    <div class="col-sm-6 col-xs-12">
+					    <a href="{{ orgnization.pk }}"><h4>{{ organization.name|upper }}</h4></a>
+				    </div>
+				    
+				    <div class="col-sm-3 hidden-phone">
+					    <p class="itemheight">{{ organization.city }}</p>
+				    </div>
+				    
+				    <div class="col-sm-3 hidden-phone">
+					    <p class="itemheight">{{ organization.twitter }}</p>
+				    </div>
+				    
+			    </div>
+			    </li>
+	    </a>
+	    {%endfor%}
+	    </ul>
+	</div>
+	
+	
+	
+	
+	
+	<hr />
+           
     </div>
 
 </div>
 
 {% endblock %}
 
-{% for city in cities %}
-        <a href="{{ city.id }}" class="hover"><div class="col-md-3 col-sm-6 col-xs-12 list-box">
-                <h3>{{ city.name }}</h3>
-                <h5>{{city.state}}</h5>
-        </div></a>
-        {% endfor %}

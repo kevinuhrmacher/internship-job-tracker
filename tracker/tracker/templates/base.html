@@ -58,14 +58,10 @@
 		<ul class="nav navbar-nav">
 		<li><a href="/user"><i class="fa fa-list fa-lg"></i></a></li>
 		  {% if request.user.is_authenticated %}
-		      {% if request.user.profile.skillset != None %}
-		      {% else %}
-		<li class="favorites"><a href="/profile/settings">Click here to set your current location and job.</a></li>
-		      {% endif %}
 		{% if request.user.profile.current_city != None %}
 		  <li class="preferences"><a href="/city/{{ request.user.profile.current_city.id }}" class="blank">{{ request.user.profile.current_city }}</a></li>
 		     {% else %}
-		  <li></li>
+		  	<li class="favorites"><a href="/profile/settings">Click here to set up your profile.</a></li>
 		      {% endif %}
 		      {% if request.user.profile.current_company != None %}
 		  <li class="preferences"><a href="/organization/{{ request.user.profile.current_company.id }}" class="blank">{{ request.user.profile.current_company }}</a></li>
@@ -100,7 +96,6 @@
     <a href="/accounts/login/" class="pull-right">Login</a>
 
       {% endif %}-->
-
       {% if request.user.is_authenticated %}
 	{% if request.user.profile.skillset != None %}
       <li><a href="{% url 'interactive_app_user' request.user.id %}"><span class=""><img style="height: 20px;"img class="typeicon" src="../../static_media/img/{{ request.user.profile.skillset }}-blue.png""/>&nbsp{{request.user.username|upper}}</span></a></li>

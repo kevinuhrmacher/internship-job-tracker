@@ -5847,6 +5847,7 @@ button.close {
   font-weight: 800;
   font-size: 1em;
   line-height: 45px;
+  text-transform: uppercase;
 }
 #base .footer {
   background-color: #242726;

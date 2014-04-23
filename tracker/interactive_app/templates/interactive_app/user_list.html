@@ -66,7 +66,15 @@
 	</div>
 	
 	<script>
-		$('#source').quicksand( $('#destination li') );
+		$("#content").quicksand($("#data > li"), 
+			{
+			  // all the parameters have sensible defaults
+			  // and in most cases can be optional
+			  duration: 1000,
+			  easing: "swing",
+			  attribute: "data-id",
+			}
+		      );
 	</script>
 	
 

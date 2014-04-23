@@ -74,6 +74,10 @@ body {
 #user .left {
   float: left;
 }
+#user h1.notbold {
+  font-weight: 600;
+  color: #4e4946;
+}
 #user .userlistitem {
   list-style-type: none;
   height: 2em;
@@ -97,8 +101,8 @@ body {
   color: #4e4946;
 }
 #user .img-box {
-  max-height: 150px;
-  max-width: 150px;
+  height: 150px;
+  width: 150px;
   margin-left: auto;
   margin-right: auto;
   border: 1px white solid;

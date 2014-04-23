@@ -5795,6 +5795,10 @@ button.close {
   color: #484847;
   font-weight: 600;
 }
+#city h1.notbold {
+  font-weight: 600;
+  color: #242726;
+}
 #city h5 {
   font-size: 18px;
 }
