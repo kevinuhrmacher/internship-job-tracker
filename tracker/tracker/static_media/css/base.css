@@ -5789,8 +5789,12 @@ button.close {
   font-family: 'Source Sans Pro';
   color: #242726;
 }
+#base header {
+  background-color: #242726;
+}
 #base .nav-logo {
   color: #f8f3e8;
+  font-family: 'Source Sans Pro';
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -5801,11 +5805,6 @@ button.close {
 #base a:hover {
   color: #6ca6ff;
   text-decoration: none;
-}
-#base .loginmodal {
-  padding: 5px 10px 5px 10px;
-  text-decoration: none;
-  color: #242726;
 }
 #base .loggedout-prompt {
   color: #f8f3e8;

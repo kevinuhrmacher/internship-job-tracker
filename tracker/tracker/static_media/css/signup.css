@@ -5830,6 +5830,16 @@ button.close {
   margin: 10px 0 10px 0px;
   padding: 5px 10px 5px 10px;
 }
+#signup .footnote {
+  margin: 0 0 100px 0;
+}
+#signup .header,
+#signup .id_remember {
+  font-family: 'Source Sans Pro';
+}
+#signup .header {
+  margin: 0 0 15px 0;
+}
 @media (max-width: 1024px) {
   #signup {
     background-image: none;
