@@ -5867,6 +5867,15 @@ button.close {
 #base .footerlogo {
   height: 40px;
 }
+#base .mobilelist {
+  margin: 15px 0 0 10px;
+  list-style-type: none;
+}
+#base .mobilepad {
+  margin: 0 0 0 10px;
+  font-size: 30px;
+  color: #f8f3e8;
+}
 #base body {
   margin: 0;
   padding: 0;
