@@ -107,7 +107,7 @@ class JobPosting(models.Model):
     jobType = models.CharField(max_length=10,choices=JOBTYPE_CHOICES)
     link = models.CharField(max_length = 50, null=True, blank=True)
     desc = models.TextField(null=True, blank=True)
-    timeStamp = models.DateTimeField(auto_now_add=True)
+    timeStamp = models.DateTimeField(auto_now_add=True, null=True)
     contact = models.CharField(max_length = 50, null=True, blank=True)
     timeFrame = models.DateTimeField(null=True, blank=True)
     organization = models.ForeignKey(Organization, null=True, blank=True)

@@ -5775,6 +5775,7 @@ button.close {
 #city {
   /* Organization page */
   /* css for list page navigation */
+  /* css for list page navigation */
 }
 #city a {
   text-decoration: none;
@@ -5944,9 +5945,85 @@ button.close {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+#city .tab-content {
+  margin-top: 20px;
+}
+#city .profile-link {
+  float: right;
+}
+#city p a {
+  color: #9fc5ff;
+}
+#city a {
+  color: #9fc5ff;
+}
+#city .profile-link {
+  float: right;
+}
+#city p a {
+  color: #9fc5ff;
+}
+#city a {
+  color: #9fc5ff;
+}
+#city a.listlink {
+  border-radius: 3px;
+  display: block;
+  text-align: center;
+  margin: 30px 0 0 0;
+}
+#city a.listlink :hover {
+  background-color: #e8eef0;
+  text-decoration: none;
+}
+#city a.listlink.active {
+  background-color: #9fc5ff;
+}
+#city a.listlink.active :hover {
+  text-decoration: none;
+}
+#city .panel-heading h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 #city .list-group {
   margin-left: 0px;
 }
 #city .margin-bottom {
   margin-bottom: 20px;
+}
+#city .panel-heading h5 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#city .list-group-item p {
+  margin-bottom: 0px;
+}
+#city .list-group-item .list-group {
+  margin-left: 0px;
+}
+#city .list-group-item .margin-bottom {
+  margin-bottom: 20px;
+}
+#city .link-font {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+#city .job-post .btn {
+  background-color: #9fc5ff;
+  border: none;
+  color: #e8eef0;
+  text-shadow: none;
+  margin-left: none;
+}
+#city .job-post h6 {
+  margin: 0px;
+}
+#city .job-post h4 {
+  margin: 0px;
+}
+#city .job-post p {
+  margin: 4px;
+}
+#city .job-post a {
+  margin: 0px;
 }
