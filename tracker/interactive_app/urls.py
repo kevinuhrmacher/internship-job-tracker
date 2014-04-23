@@ -9,10 +9,12 @@ urlpatterns = patterns('',
     # url(r'^user/$', views.userList, name='interactive_app_user_list'),
     url(r'^user/(?P<pk>\d+)$', views.user, name='interactive_app_user'),
     url(r'^user/$', views.userList, name='interactive_app_user_list'),
-    url(r'^profile/settings$', views.profile_settings, name='profile_settings'),
+    url(r'^profile/settings$', views.profileSettings, name='profile_settings'),
     url(r'^organization/$', views.organizationList, name='interactive_app_organization_list'),
     url(r'^organization/(?P<pk>\d+)$', views.organization, name='interactive_app_organization'),
     url(r'^city/$', views.cityList, name='interactive_app_city_list'),
     url(r'^city/(?P<pk>\d+)$', views.city, name='interactive_app_city'),
+    url(r'^job/post$', views.PostJob, name='job_posting'),
+    # url(r'^about/',views.about, name='interactive_app_about')
     url(r'^about/', views.about, name='interactive_app_about')
     )

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+    <section id="section-job-post">
+        <form action="" method="post" class="form-horizontal" role="form" autocomplete="off" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Post a Job</h2>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            {{form.as_p}}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12" style="text-align: center">
+                            <input type="submit" value="Post" class="btn btn-primary" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+{% endblock %}
