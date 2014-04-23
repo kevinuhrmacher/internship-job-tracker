@@ -3,12 +3,13 @@
 {%load url from future %}
 
 {% block content %}
+<body style="background-color:#242726">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 </div><!--container-->
 <div id="home">
 	<div id="map"></div>
 </div>
-
+</body>
 <script type="text/javascript">
 
 //empty array to push new geoJson objects into
@@ -26,7 +27,7 @@ var geoJson = []
 			title: "{{ user.user }}",
 			url: "/user/{{user.pk}}",
 			description: '{{ user.current_company }}',
-			'marker-size':'small',
+			'marker-size':'medium',
 			'marker-color':'#4B5485'
 	}
 };
