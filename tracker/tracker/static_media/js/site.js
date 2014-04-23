@@ -11,6 +11,7 @@ $('.article').readmore({
 	}
 });
 
+<<<<<<< HEAD
 $('.description').readmore({
 	maxHeight: 40,
 	heightMargin: 16,
@@ -22,3 +23,9 @@ $('.description').readmore({
 		}
 	}
 });
+=======
+
+//mapbox js
+
+
+>>>>>>> f76015c9c6dbf250cf452316df5cf2b0a937d1af
