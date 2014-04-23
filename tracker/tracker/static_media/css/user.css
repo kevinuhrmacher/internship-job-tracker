@@ -1,6 +1,9 @@
 body {
   background-color: #d5d6d8;
 }
+#user {
+  /* css for list page navigation */
+}
 #user a {
   text-decoration: none;
   color: #4e4946;
@@ -23,6 +26,60 @@ body {
 #user .skillset-icon {
   height: 1em;
   margin: 0 10px 0 0;
+}
+#user #filters {
+  background-color: #FFF;
+  margin: -40px 0 0 0;
+  padding: 5px 0 10px 5px;
+}
+#user .filters {
+  display: block;
+  float: left;
+  background-color: #FFF;
+}
+#user .types {
+  color: #FFF;
+  display: block;
+  float: left;
+  padding: 5px 10px 5px 5px;
+  margin: 5px 5px 5px 5px;
+}
+#user .types:hover {
+  background-color: #e8eef0;
+  border-radius: 2px;
+}
+#user .typeicon {
+  height: 25px;
+  margin: 0 5px 0 10px;
+}
+#user a.listlink {
+  border-radius: 3px;
+  display: block;
+  text-align: center;
+  margin: 30px 0 0 0;
+}
+#user a.listlink :hover {
+  background-color: #e8eef0;
+  text-decoration: none;
+}
+#user a.listlink.active {
+  background-color: #9fc5ff;
+}
+#user a.listlink.active :hover {
+  text-decoration: none;
+}
+#user p.nounderline:hover {
+  text-decoration: none;
+}
+#user .left {
+  float: left;
+}
+#user .userlistitem {
+  list-style-type: none;
+  height: 2em;
+}
+#user .itemheight {
+  line-height: 30px;
 }
 #user .copy {
   font-weight: 400;

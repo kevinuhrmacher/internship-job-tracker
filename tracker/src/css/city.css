@@ -5774,6 +5774,15 @@ button.close {
 }
 #city {
   /* Organization page */
+  /* css for list page navigation */
+}
+#city a {
+  text-decoration: none;
+  color: #4e4946;
+  font-family: inherit;
+}
+#city a :hover {
+  text-decoration: underline;
 }
 #city h1,
 #city h2,
@@ -5781,21 +5790,16 @@ button.close {
 #city h4,
 #city h5,
 #city h6,
-#city p,
-#city body {
-  font-family: 'Source Sans Pro';
-  color: #242726;
-}
-#city h1,
-#city h2,
-#city h4 {
-  font-weight: bold;
+#city p {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #484847;
+  font-weight: 600;
 }
 #city h5 {
   font-size: 18px;
 }
 #city p {
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', sans-serif;
   color: #242726;
 }
 #city .list-box {
@@ -5827,10 +5831,6 @@ button.close {
   opacity: none;
   padding-left: 20px;
 }
-#city .organization-map img {
-  height: 250px;
-  width: 250px;
-}
 #city .organization-map h6 {
   margin-top: 0px;
   color: #f8f3e8;
@@ -5839,29 +5839,30 @@ button.close {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  width: 250px;
+  width: 300px;
 }
 #city .organization-contact {
   background-color: #4e4947;
   border-left: 3px solid #242726;
-  padding: 5px;
   text-align: center;
-}
-#city .organization-contact td,
-#city .organization-contact th {
-  display: table-cell;
+  padding: 15px 0px 8px 0px;
 }
 #city .organization-contact h4 {
-  text-align: center;
+  text-align: left;
   color: #e8eef0;
+  padding-top: 6px;
 }
 #city .organization-contact p {
   color: #e8eef0;
 }
+#city .organization-contact img {
+  height: 50px;
+  width: 50px;
+}
 #city .featured {
   background-color: #e8eef0;
   text-align: center;
-  line-height: 1.5px;
+  line-height: 2px;
   margin-top: 20px;
 }
 #city .featured .btn {
@@ -5869,6 +5870,7 @@ button.close {
   border: none;
   color: #e8eef0;
   text-shadow: none;
+  margin-bottom: 20px;
 }
 #city .featured .img-circle {
   width: 140px;
@@ -5922,12 +5924,29 @@ button.close {
 #city a {
   color: #9fc5ff;
 }
-#city .profile-link {
-  float: right;
+#city a.listlink {
+  border-radius: 3px;
+  display: block;
+  text-align: center;
+  margin: 30px 0 0 0;
 }
-#city p a {
-  color: #9fc5ff;
+#city a.listlink :hover {
+  background-color: #e8eef0;
+  text-decoration: none;
 }
-#city a {
-  color: #9fc5ff;
+#city a.listlink.active {
+  background-color: #9fc5ff;
+}
+#city a.listlink.active :hover {
+  text-decoration: none;
+}
+#city .panel-heading h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#city .list-group {
+  margin-left: 0px;
+}
+#city .margin-bottom {
+  margin-bottom: 20px;
 }

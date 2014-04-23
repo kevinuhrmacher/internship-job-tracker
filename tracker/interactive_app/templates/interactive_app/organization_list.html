@@ -3,8 +3,21 @@
 {% block content %}
 <div id="city">
     <div class="container">
-	<h2>Organizations</h2>
-        <hr />
+	<div id="user" class="row">
+		<div class="col-md-6">
+			<h1><i class="fa fa-list"></i> SEARCH THE DATABASE</h2>
+		</div>
+		<div class="col-md-2">
+			<a href="/user" class="listlink"><h3>USERS</h3></a>
+		</div>
+		<div class="col-md-2">
+			<a href="/city" class="listlink"><h3>LOCATIONS</h3></a>
+		</div>
+		<div class="col-md-2">
+			<a href="#" class="listlink active"><h3>COMPANIES</h3></a>
+		</div>
+	</div>
+	<hr />
             {% for organization in organizations %}
             <a href="{{ organization.pk }}">
             <div class="row">
