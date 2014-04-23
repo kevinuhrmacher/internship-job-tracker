@@ -5929,9 +5929,12 @@ button.close {
 #city a {
   color: #9fc5ff;
 }
-#city .panel-heading h3 {
-  margin-top: 5px;
-  margin-bottom: 5px;
+#city .panel-heading h5 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#city .list-group-item p {
+  margin-bottom: 0px;
 }
 #city .list-group {
   margin-left: 0px;
