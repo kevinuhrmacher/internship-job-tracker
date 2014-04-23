@@ -48,28 +48,33 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse">
 
-		      <a href="{% url 'interactive_app_home'%}"><span class="navbar-brand nav-logo">Ramses Rolodex</span></a>
+		      <a href="{% url 'interactive_app_home'%}"><span class="navbar-brand nav-logo">Ramses Rolodex  		
+  </span></a>
 
 		     <!-- Here goes the user preferences  -->
-		      <ul class="nav navbar-nav">
-      {% if request.user.is_authenticated %}
-      				<li class="favorites">Click here to set your:</li>
-      <li class="preferences"><a href="/{{ user.typepref }}" class="blank"><img class="typeicon-nav" src="../../static_media/img/{{ request.user.profile.skillset }}-blue.png">Skillset</a></li>
-			     {% if request.user.profile.current_city != None %}
-      <li class="preferences"><a href="/city/{{request.user.profile.current_city.id}}">{{ request.user.profile.current_city }}</a></li>
-			     {% else %}
-           <li class="preferences blank"><a href="/city/1" class="blank">City</a></li>
-          {% endif %}
-          {% if request.user.profile.current_city != None %}
-      <li class="preferences"><a href="/organization/{{ request.user.profile.current_company.id }}">{{ request.user.profile.current_company }}</a></li>
+		      
+		      
+		<ul class="nav navbar-nav">
+		  {% if request.user.is_authenticated %}
+		      {% if request.user.profile.skillset != None %}
+		<li class="preferences"><a href="/user" class="blank">{{ request.user.profile.skillset }}<img class="typeicon-nav" src="../../static_media/img/{{ request.user.profile.skillset }}-blue.png">Skillset</a></li>
 		      {% else %}
-          <li class="preferences"><a href="/organization/1" class="blank">Company</a></li>
-          {% endif %}
-      {% else %}
-
-      {% endif %}
-
-      </ul>
+		<li class="favorites"><a href="/profile/settings">Click here to set your current location and job.</a></li>
+		      {% endif %}
+		{% if request.user.profile.current_city != None %}
+		  <li class="preferences"><a href="/city/{{ request.user.profile.current_city.id }}" class="blank">{{ request.user.profile.current_city }}</a></li>
+					 {% else %}
+		  <li></li>
+		      {% endif %}
+		      {% if request.user.profile.current_city != None %}
+		  <li class="preferences"><a href="/organization/{{ request.user.profile.current_company.id }}" class="blank">{{ request.user.profile.current_company }}</a></li>
+				  {% else %}
+		<li></li>
+		      {% endif %}
+		  {% else %}
+	    
+		  {% endif %}
+		</ul>
 		      
 
 		<!-- If not logged in, they'll be prompted to do so.
