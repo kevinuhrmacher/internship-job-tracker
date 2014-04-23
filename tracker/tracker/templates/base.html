@@ -106,7 +106,7 @@
       {% endif %}-->
       {% if request.user.is_authenticated %}
 	{% if request.user.profile.skillset != None %}
-      <li><a href="{% url 'interactive_app_user' request.user.id %}"><span class=""><img style="height: 20px;"img class="typeicon" src="../../static_media/img/{{ request.user.profile.skillset }}-blue.png""/>&nbsp{{request.user.username|upper}}</span></a></li>
+      <li><a href="{% url 'interactive_app_user' request.user.id %}"><span class=""><img style="height: 20px;"img class="typeicon" src="../../static_media/img/{{ request.user.profile.skillset }}-blue.png"/>&nbsp{{request.user.username|upper}}</span></a></li>
 	{% else %}
 	<li></li>
 	{% endif %}
