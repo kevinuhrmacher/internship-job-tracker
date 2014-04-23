@@ -5774,7 +5774,16 @@ button.close {
 }
 #city {
   /* Organization page */
-  margin-bottom: 60px;
+  /* css for list page navigation */
+  /* css for list page navigation */
+}
+#city a {
+  text-decoration: none;
+  color: #4e4946;
+  font-family: inherit;
+}
+#city a :hover {
+  text-decoration: underline;
 }
 #city h1,
 #city h2,
@@ -5782,21 +5791,16 @@ button.close {
 #city h4,
 #city h5,
 #city h6,
-#city p,
-#city body {
-  font-family: 'Source Sans Pro';
-  color: #242726;
-}
-#city h1,
-#city h2,
-#city h4 {
-  font-weight: bold;
+#city p {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #484847;
+  font-weight: 600;
 }
 #city h5 {
   font-size: 18px;
 }
 #city p {
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', sans-serif;
   color: #242726;
 }
 #city .list-box {
@@ -5921,6 +5925,29 @@ button.close {
 #city a {
   color: #9fc5ff;
 }
+#city a.listlink {
+  border-radius: 3px;
+  display: block;
+  text-align: center;
+  margin: 30px 0 0 0;
+}
+#city a.listlink :hover {
+  background-color: #e8eef0;
+  text-decoration: none;
+}
+#city a.listlink.active {
+  background-color: #9fc5ff;
+}
+#city a.listlink.active :hover {
+  text-decoration: none;
+}
+#city .panel-heading h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#city .tab-content {
+  margin-top: 20px;
+}
 #city .profile-link {
   float: right;
 }
@@ -5930,12 +5957,34 @@ button.close {
 #city a {
   color: #9fc5ff;
 }
-#city .panel-heading h5 {
-  margin-top: 0px;
-  margin-bottom: 0px;
+#city .profile-link {
+  float: right;
 }
-#city .list-group-item p {
-  margin-bottom: 0px;
+#city p a {
+  color: #9fc5ff;
+}
+#city a {
+  color: #9fc5ff;
+}
+#city a.listlink {
+  border-radius: 3px;
+  display: block;
+  text-align: center;
+  margin: 30px 0 0 0;
+}
+#city a.listlink :hover {
+  background-color: #e8eef0;
+  text-decoration: none;
+}
+#city a.listlink.active {
+  background-color: #9fc5ff;
+}
+#city a.listlink.active :hover {
+  text-decoration: none;
+}
+#city .panel-heading h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 #city .list-group {
   margin-left: 0px;
@@ -5943,8 +5992,21 @@ button.close {
 #city .margin-bottom {
   margin-bottom: 20px;
 }
+#city .panel-heading h5 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#city .list-group-item p {
+  margin-bottom: 0px;
+}
+#city .list-group-item .list-group {
+  margin-left: 0px;
+}
+#city .list-group-item .margin-bottom {
+  margin-bottom: 20px;
+}
 #city .link-font {
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', sans-serif;
 }
 #city .job-post .btn {
   background-color: #9fc5ff;
