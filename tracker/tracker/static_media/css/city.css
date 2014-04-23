@@ -5942,3 +5942,25 @@ button.close {
 #city .margin-bottom {
   margin-bottom: 20px;
 }
+#city .link-font {
+  font-family: 'Source Sans Pro';
+}
+#city .job-post .btn {
+  background-color: #9fc5ff;
+  border: none;
+  color: #e8eef0;
+  text-shadow: none;
+  margin-left: none;
+}
+#city .job-post h6 {
+  margin: 0px;
+}
+#city .job-post h4 {
+  margin: 0px;
+}
+#city .job-post p {
+  margin: 4px;
+}
+#city .job-post a {
+  margin: 0px;
+}

@@ -1,0 +1,72 @@
+[
+	{
+		"pk": 0,
+		"model":"interactive_app.JobPosting",
+		"fields":{
+			"title": "Creative Intern",
+			"jobType": "Internship",
+                        "link": "http://www.washingtonpost.com/",
+                        "desc": "This is a totaly fun internship lalalalalalla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lobortis, tortor eu porttitor elementum, tellus nulla lobortis urna, sed imperdiet justo eros quis neque. Integer porttitor mi vitae nisi tincidunt tincidunt. Curabitur in aliquet augue. Donec nisl ligula, dictum eget fringilla sed, mollis ac nunc. Nullam eleifend nulla arcu, ac volutpat turpis ultricies non. Aenean vitae imperdiet est. Nulla metus lorem, dignissim in scelerisque vel, ullamcorper in tortor. Vivamus porttitor sodales iaculis. Ut varius est risus, eu condimentum nisi gravida nec.",
+                        "timeFrame": "2014-12-01",
+                        "contact": "email@gmail.com",
+                        "timeStamp": "2014-12-01",
+                        "organization": 0
+		}
+	},
+	{
+		"pk": 1,
+		"model":"interactive_app.JobPosting",
+		"fields":{
+			"title": "Reporting Intern",
+			"jobType": "Internship",
+                        "link": "http://pilotonline.com",
+                        "desc": "This is a totaly fun internship. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lobortis, tortor eu porttitor elementum, tellus nulla lobortis urna, sed imperdiet justo eros quis neque. Integer porttitor mi vitae nisi tincidunt tincidunt. Curabitur in aliquet augue. Donec nisl ligula, dictum eget fringilla sed, mollis ac nunc. Nullam eleifend nulla arcu, ac volutpat turpis ultricies non. Aenean vitae imperdiet est. Nulla metus lorem, dignissim in scelerisque vel, ullamcorper in tortor. Vivamus porttitor sodales iaculis. Ut varius est risus, eu condimentum nisi gravida nec.",
+                        "timeFrame": "2014-12-01",
+                        "contact": "email@gmail.com",
+                        "timeStamp": "2014-12-01",
+                        "organization": 1
+		}
+	},
+	{
+		"pk": 2,
+		"model":"interactive_app.JobPosting",
+		"fields":{
+			"title": "Reporter",
+			"jobType": "Job",
+                        "link": "http://pilotonline.com",
+                        "desc": "This is a totaly fun internship. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lobortis, tortor eu porttitor elementum, tellus nulla lobortis urna, sed imperdiet justo eros quis neque. Integer porttitor mi vitae nisi tincidunt tincidunt. Curabitur in aliquet augue. Donec nisl ligula, dictum eget fringilla sed, mollis ac nunc. Nullam eleifend nulla arcu, ac volutpat turpis ultricies non. Aenean vitae imperdiet est. Nulla metus lorem, dignissim in scelerisque vel, ullamcorper in tortor. Vivamus porttitor sodales iaculis. Ut varius est risus, eu condimentum nisi gravida nec.",
+                        "timeFrame": "2014-12-01",
+                        "contact": "email@gmail.com",
+                        "timeStamp": "2014-12-01",
+                        "organization": 2
+		}
+	},
+	{
+		"pk": 3,
+		"model":"interactive_app.JobPosting",
+		"fields":{
+			"title": "Helpful Intern",
+			"jobType": "Internship",
+                        "link": "http://www.washingtonpost.com/",
+                        "desc": "This is a totaly fun internship lalalalalalla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lobortis, tortor eu porttitor elementum, tellus nulla lobortis urna, sed imperdiet justo eros quis neque. Integer porttitor mi vitae nisi tincidunt tincidunt. Curabitur in aliquet augue. Donec nisl ligula, dictum eget fringilla sed, mollis ac nunc. Nullam eleifend nulla arcu, ac volutpat turpis ultricies non. Aenean vitae imperdiet est. Nulla metus lorem, dignissim in scelerisque vel, ullamcorper in tortor. Vivamus porttitor sodales iaculis. Ut varius est risus, eu condimentum nisi gravida nec.",
+                        "timeFrame": "2014-12-01",
+                        "contact": "email@gmail.com",
+                        "timeStamp": "2014-12-01",
+                        "organization": 0
+		}
+	},
+	{
+		"pk": 4,
+		"model":"interactive_app.JobPosting",
+		"fields":{
+			"title": "Not so helpful Intern",
+			"jobType": "Internship",
+                        "link": "http://www.washingtonpost.com/",
+                        "desc": "This is a totaly fun internship lalalalalalla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lobortis, tortor eu porttitor elementum, tellus nulla lobortis urna, sed imperdiet justo eros quis neque. Integer porttitor mi vitae nisi tincidunt tincidunt. Curabitur in aliquet augue. Donec nisl ligula, dictum eget fringilla sed, mollis ac nunc. Nullam eleifend nulla arcu, ac volutpat turpis ultricies non. Aenean vitae imperdiet est. Nulla metus lorem, dignissim in scelerisque vel, ullamcorper in tortor. Vivamus porttitor sodales iaculis. Ut varius est risus, eu condimentum nisi gravida nec.",
+                        "timeFrame": "2014-12-01",
+                        "contact": "email@gmail.com",
+                        "timeStamp": "2014-12-01",
+                        "organization": 0
+		}
+	}
+] 

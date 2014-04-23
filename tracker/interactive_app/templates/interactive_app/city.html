@@ -8,7 +8,7 @@
     <div class="row">
         <h1>Welcome to {{ city.name }}</h1>
         <hr />
-        <div class="col-md-6">
+        <div class="col-md-6 margin-bottom">
             <h3>Tar Heels working here:</h3>
             <table class="table table-striped">
                 <thead>
@@ -40,13 +40,11 @@
                 </div>
                 <hr />
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 margin-bottom">
             <img class="city_map" src="http://api.tiles.mapbox.com/v3/afortune906.hnidfk42/{{ city.longitude }},{{ city.lat }},11/500x300.jpg"/>
+            <a href="{% url 'interactive_app_city_list' %}" class="link-font">View all cities &raquo;</a>
         </div>
-            
-        <div class="col-md-6">   
-            <a href="{% url 'interactive_app_city_list' %}">View all cities &raquo;</a>
-        </div>
+
 
     </div>
 

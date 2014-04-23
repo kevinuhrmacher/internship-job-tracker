@@ -56,7 +56,7 @@ def cityList(request):
 def organization(request,pk):
     organization = get_object_or_404(Organization, id=pk)
     current_people = UserProfile.objects.filter(current_company = pk)
-    jobPosting_list = JobPosting.objects.all()
+    jobPosting_list = JobPosting.objects.filter(organization = pk)
     return render(request, "interactive_app/organization.html", {'organization':organization, 'current_people': current_people, 'jobPosting_list': jobPosting_list})
 
 def organizationList(request):

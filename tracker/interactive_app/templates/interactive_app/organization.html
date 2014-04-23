@@ -11,12 +11,11 @@
         <div class="col-md-8">
             <h3>Description:</h3>
             <p>{{ organization.bio }}</p>
-            <button class="btn btn-default btn-sm" type="button" style="float:right"><a href="#"><p style="margin-bottom:0px">Post a job</p></a></button>
         </div>
         <div class="col-md-4 hidden-sm hidden-xs organization-map">
             <img src="http://api.tiles.mapbox.com/v3/afortune906.hnidfk42/{{ organization.longitude }},{{ organization.lat }},11/300x300.jpg"/>
             <h6><i class="fa fa-map-marker"></i> {{ organization.address }}</h6>
-            <a href="{% url 'interactive_app_organization_list' %}">View all organizations &raquo;</a>
+            <a href="{% url 'interactive_app_organization_list' %}" class="link-font">View all organizations &raquo;</a>
         </div>
     </div>
     <div class="row tab-content">
@@ -63,8 +62,8 @@
             <h3>Tar Heels working here</h3>
                 
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#current" data-toggle="tab">Current</a></li>
-                    <li><a href="#previous" data-toggle="tab">Previous</a></li>
+                    <li class="active"><a href="#current" data-toggle="tab" class="link-font">Current</a></li>
+                    <li><a href="#previous" data-toggle="tab" class="link-font">Previous</a></li>
                 </ul>
                 
                 <div class="tab-content">
@@ -97,6 +96,37 @@
         </div>
     </div>
     </div>
+
+    <div id="city">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 margin-bottom job-post">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 style="margin-top:0px">Job postings</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-default job-post" role="button" style="float:right"><a href="{% url 'job_posting' %}"><p>Post a job</p></a></button>
+                    </div>
+                </div>
+                {% for job in jobPosting_list %}
+                    <a href="{{ job.link }}" target="_blank"><h4>{{ job.title }}</h4></a>
+                    <h6>Posted {{ job.timeStamp }}</h6>
+                    <p><strong>Job Type:</strong> {{ job.jobType }}</p>
+                    <p><strong>Start Date:</strong> {{ job.timeFrame }}</p>
+                    <a href="mailto:{{ job.contact }}" target="_top" class="link-font">Contact</a>
+                    <p class="description">{{ job.desc }}<a href="{{ job.link }}" class="link-font"> Learn more &raquo;</a></p>
+                    <hr />
+                {% endfor %}
+                
+                
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+
 </div>   
 </div>
 
