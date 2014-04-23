@@ -7,10 +7,11 @@
 <div class="container">
     <div class="row">
         <h2>{{ organization.name }}</h2>
-        <hr /> 
+        <hr />
         <div class="col-md-8">
             <h3>Description:</h3>
-            <p>{{ organization.bio }}</p> 
+            <p>{{ organization.bio }}</p>
+            <a href="#" class="btn btn-default btn-sm" style="float:right" role="button"><h5>Post a job</h5></a>
         </div>
         <div class="col-md-4 hidden-sm hidden-xs organization-map">
             <img src="http://api.tiles.mapbox.com/v3/afortune906.hnidfk42/{{ organization.longitude }},{{ organization.lat }},11/300x300.jpg"/>
@@ -37,8 +38,8 @@
             </div>
         </div>
         <div class="col-md-4">
-            <a class="twitter-timeline" href="{{ organization.twitter }}" data-tweet-limit="1" width="300" height="500" data-widget-id="456475469009793024">Tweets by {{ organization.name }}</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            <a href="{{ organization.twitter}}" class="twitter-follow-button" data-show-count="true" data-lang="en" data-size="large" data-width="400px">Follow @twitter</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div>
     </div>
     <div class="row">
@@ -54,24 +55,24 @@
                 {% endfor %}
         </div>
     </div>
-    
+
     <div id="city">
     <div class="container">
         <div class="row">
         <div class="col-md-12">
             <h3>Tar Heels working here</h3>
-                
+
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#current" data-toggle="tab">Current</a></li>
                     <li><a href="#previous" data-toggle="tab">Previous</a></li>
                 </ul>
-                
+
                 <div class="tab-content">
                     <div class="tab-pane active" id="current">
-                        {% for person in current_people %}
+                        {% for person in featuredPeople %}
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
-                                    <a href="{% url 'interactive_app_user' person.id%}"><img src="{% static 'img/' %}{{ person.img_url }}" class="img-thumbnail"></a>   
+                                    <a href="{% url 'interactive_app_user' person.id%}"><img src="{% static 'img/' %}{{ person.img_url }}" class="img-thumbnail"></a>
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-12">
                                 <h4>{{ person.name }}</h4>
@@ -81,22 +82,22 @@
                             <div class="col-md-2 col-sm-2 col-xs-12 ">
                                 <a href="{% url 'interactive_app_user' person.id%}">View Profile &raquo;</a>
                             </div>
-                        
+
                         </div>
                         <hr />
                         {% endfor %}
                     </div>
-                    
+
                     <div class="tab-pane" id="previous">
                         <p>No information for previous people yet.</p>
                     </div>
-                    
+
                 </div>
         </div>
         </div>
     </div>
     </div>
-</div>   
+</div>
 </div>
 
 

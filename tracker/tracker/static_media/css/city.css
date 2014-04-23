@@ -5929,3 +5929,13 @@ button.close {
 #city a {
   color: #9fc5ff;
 }
+#city .panel-heading h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#city .list-group {
+  margin-left: 0px;
+}
+#city .margin-bottom {
+  margin-bottom: 20px;
+}
