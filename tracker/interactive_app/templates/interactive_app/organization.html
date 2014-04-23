@@ -46,7 +46,7 @@
             <h4>FEATURED</h4>
                 <div class="col-md-4">
                 {% for person in current_people %}
-                    <a href="{% url 'interactive_app_user' person.id%}"><img src="{% static 'img/' %}{{ person.img_url }}" class="img-circle">
+                    <a href="{% url 'interactive_app_user' person.id%}"><img src="{{ person.profile_image_url }}" class="img-circle">
                     <h4>{{ person.name }}</h4></a>
                     <p>{{ person.current_position }}</p>
                     <a class="btn btn-default" href="{% url 'interactive_app_user' person.id%}" role="button">View Profile</a>
@@ -68,13 +68,13 @@
 
                 <div class="tab-content">
                     <div class="tab-pane active" id="current">
-                        {% for person in featuredPeople %}
+                        {% for person in current_people %}
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
-                                    <a href="{% url 'interactive_app_user' person.id%}"><img src="{% static 'img/' %}{{ person.img_url }}" class="img-thumbnail"></a>
+                                    <a href="{% url 'interactive_app_user' person.id%}"><img src="{{ person.profile_image_url }}" class="img-thumbnail"></a>
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                <h4>{{ person.name }}</h4>
+                                <h4>{{ person.user }}</h4>
                                 <p><strong>{{ person.current_position }}</strong></p>
                                 <p><strong>Major:</strong> {{ person.major }}- {{ person.skillset }}</p>
                             </div>
@@ -119,16 +119,16 @@
                     <p class="description">{{ job.desc }}<a href="{{ job.link }}" class="link-font"> Learn more &raquo;</a></p>
                     <hr />
                 {% endfor %}
-                
-                
+
+
                 </div>
-                
+
             </div>
         </div>
     </div>
     </div>
 
-</div>   
+</div>
 
 </div>
 </div>
