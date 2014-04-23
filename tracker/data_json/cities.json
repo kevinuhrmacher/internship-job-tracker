@@ -57,5 +57,53 @@
 			"longitude": "-80.226439",
                         "img_url": "miamifl.jpg"
 		}
+	},
+
+	        {
+		"pk": 5,
+		"model":"interactive_app.City",
+		"fields":{
+			"name": "New York",
+                        "state": "New York",
+			"lat": "40.714353",
+			"longitude": "-74.005973",
+                        "img_url": "newyorkny.jpg"
+		}
+	},
+
+	        {
+		"pk": 6,
+		"model":"interactive_app.City",
+		"fields":{
+			"name": "Chicago",
+                        "state": "Illinois",
+			"lat": "41.878114",
+			"longitude": "-87.629798",
+                        "img_url": "chicagoil.jpg"
+		}
+	},
+
+		{
+		"pk": 7,
+		"model":"interactive_app.City",
+		"fields":{
+			"name": "Boston",
+                        "state": "Massachusetts",
+			"lat": "42.358431",
+			"longitude": "-71.059773",
+                        "img_url": "bostonma.jpg"
+		}
+	},
+
+		{
+		"pk": 8,
+		"model":"interactive_app.City",
+		"fields":{
+			"name": "Los Angeles",
+                        "state": "California",
+			"lat": "34.052234",
+			"longitude": "-118.243685",
+                        "img_url": "losangelesca.jpg"
+		}
 	}
 ]
